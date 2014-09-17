@@ -18,7 +18,7 @@ This has welcome message and link to the survey page-->
 <body>
 	<h1>Welcome to Volgenau School!!!</h1>
 	<p>
-		Virginia School wishes to conduct students survey to know about
+		Volgenau School wishes to conduct students survey to know about
 		student's satisfaction about various aspects of School. Kindly, follow
 		the below link to complete the survey.<br> <a
 			href="/swe645project/studentsurveypage">Student Survey</a>
