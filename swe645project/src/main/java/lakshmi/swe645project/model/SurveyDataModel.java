@@ -1,3 +1,5 @@
+/*****************Lakshmi Venkataiah****************/
+/*This class represents the survey model required for survey form page*/
 package lakshmi.swe645project.model;
 
 import java.util.ArrayList;

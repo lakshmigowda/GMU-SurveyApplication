@@ -1,3 +1,6 @@
+<!-- Lakshmi Venkataiah -->
+<!-- This page has a survey form input fields, submit and cancel buttons. 
+This is used to collect survey data from students -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -11,7 +14,7 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css"
-	href="/swe645project/resources/css/test.css" />
+	href="/swe645project/resources/css/survey.css" />
 <script src="/swe645project/resources/js/studentSurveyData.js"></script>
 
 <script src="/swe645project/resources/jqueryui/jquery-ui.js"></script>
@@ -23,7 +26,7 @@
 	<div>
 		<form:form method="POST" action="/swe645project/surveysubmit"
 			commandName="surveyresult" id="surveyform">
-			<p class="test">Welcome to Virginia School's Student Survey!!</p>
+			<p class="red">Welcome to Volgenau School's Student Survey!!</p>
 			<table>
 				<tr>
 					<td><form:label path="firstName">First Name:</form:label></td>

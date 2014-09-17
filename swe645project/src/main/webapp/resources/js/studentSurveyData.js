@@ -1,3 +1,6 @@
+// Lakshmi Venkataiah
+// This page has the required javascript code for swe645 project. 
+// This file has validations for the required fields on the Student Survey page.
 $(document).ready(function() {
 
 	$("#ui-datepicker-div").remove();

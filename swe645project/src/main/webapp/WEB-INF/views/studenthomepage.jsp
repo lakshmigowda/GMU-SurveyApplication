@@ -1,3 +1,7 @@
+<!-- Lakshmi Venkataiah -->
+<!--  This is a HTML page for student homepage.
+This has welcome message and link to the survey page-->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -9,10 +13,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Home Page</title>
 <link rel="stylesheet" type="text/css"
-	href="/swe645project/resources/css/test.css" />
+	href="/swe645project/resources/css/survey.css" />
 </head>
 <body>
-	<h1>Welcome to Virginia School!!!</h1>
+	<h1>Welcome to Volgenau School!!!</h1>
 	<p>
 		Virginia School wishes to conduct students survey to know about
 		student's satisfaction about various aspects of School. Kindly, follow
