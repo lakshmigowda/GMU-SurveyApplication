@@ -8,25 +8,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Test welcome page</title>
-
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css"
 	href="/swe645project/resources/css/test.css" />
+<script src="/swe645project/resources/js/test.js"></script>
+
 </head>
 
 <body>
 	<div>
 		<form:form method="POST" action="/swe645project/testsubmit"
-			commandName="testmodel">
+			commandName="padma">
 			<p class="test">Welcome to Lakshmi's Spring MVC Test Project!!</p>
 			<table>
 				<tr>
 					<td><form:label path="testName">TestName:</form:label></td>
-					<td><form:input path="testName"></form:input></td>
+					<td><form:input path="testName" id="name"></form:input></td>
 				</tr>
 				<tr>
 				<tr>
-					<td><input type="submit" class="submitbtn" value="Submit"></td>
+					<td><input type="submit" id="submit" class="submitbtn"
+						value="Submit"></td>
 				</tr>
 			</table>
 
