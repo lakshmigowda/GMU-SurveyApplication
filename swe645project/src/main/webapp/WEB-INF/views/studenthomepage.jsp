@@ -16,12 +16,14 @@ This has welcome message and link to the survey page-->
 	href="/swe645project/resources/css/survey.css" />
 </head>
 <body>
-	<h1>Welcome to Volgenau School!!!</h1>
-	<p>
-		Volgenau School wishes to conduct students survey to know about
-		student's satisfaction about various aspects of School. Kindly, follow
-		the below link to complete the survey.<br> <a
-			href="/swe645project/studentsurveypage">Student Survey</a>
-	</p>
+	<div class="form-container">
+		<h1 class="label">Welcome to Volgenau School!!!</h1>
+		<p class="label">
+			Volgenau School wishes to conduct students survey to know about
+			student's satisfaction about various aspects of School. Kindly,
+			follow the below link to complete the survey.<br> <a
+				href="/swe645project/studentsurveypage">Student Survey</a>
+		</p>
+	</div>
 </body>
 </html>
