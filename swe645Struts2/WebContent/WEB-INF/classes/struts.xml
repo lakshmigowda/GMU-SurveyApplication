@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="helloworld" extends="struts-default">
+
+		<action name="welcome" class="com.swe645Struts2.struts2.WelcomeAction"
+			method="welcome">
+			<result name="welcome">/pages/welcome.jsp</result>
+		</action>
+
+		<action name="createsurvey" class="com.swe645Struts2.struts2.WelcomeAction"
+			method="createsurvey">
+			<result name="studentsurvey">/pages/studentsurvey.jsp</result>
+		</action>
+
+		<action name="storesurvey" class="com.swe645Struts2.struts2.StoreSurveyAction"
+			method="storesurvey">
+			<result name="input">/pages/studentsurvey.jsp</result>
+			<result name="surveyresult">/pages/SimpleAcknowledgement.jsp</result>
+			<result name="winnersurveyresult">/pages/WinnerAcknowledgement.jsp</result>
+		</action>
+
+		<action name="surveylist" class="com.swe645Struts2.struts2.WelcomeAction"
+			method="surveylist">
+			<result name="listsurvey">/pages/listsurvey.jsp</result>
+		</action>
+
+	</package>
+</struts>
