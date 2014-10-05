@@ -56,7 +56,6 @@ public class WelcomeAction extends ActionSupport implements
 		return "listsurvey";
 	}
 
-	@Override
 	public Student getModel() {
 		return student;
 	}

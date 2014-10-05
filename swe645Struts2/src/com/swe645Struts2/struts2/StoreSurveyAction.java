@@ -92,7 +92,6 @@ public class StoreSurveyAction extends ActionSupport implements
 		return interestlist;
 	}
 
-	@Override
 	public Student getModel() {
 		return student;
 	}

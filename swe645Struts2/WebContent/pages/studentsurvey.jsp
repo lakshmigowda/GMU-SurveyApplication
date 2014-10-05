@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<sx:head/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Survey Form</title>
 <style type="text/css">
@@ -12,10 +16,15 @@
 	width: 500px;
 	border: 1px solid #CC0000;
 }
+
+.body {
+	background-color: #CCEEFF;
+}
 </style>
+
 </head>
 
-<body>
+<body class="body">
 	<div class="form-container">
 
 		<s:if test="hasActionErrors()">
@@ -25,40 +34,42 @@
 		</s:if>
 		<s:form action="storesurvey.action">
 			<div class="form-title">
-				<p class="red">Welcome to Volgenau School's Student Survey!!</p>
+				<h2>Welcome to Volgenau School's Student Survey!!</h2>
 			</div>
 			<table>
 				<tr>
-					<td><label for="student.firstName">First Name</label> <s:textfield
-							name="student.firstName" label="First Name" /></td>
+					<td><label for="student.firstName">First Name</label></td>
+					<td><s:textfield name="student.firstName" label="First Name" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.lastName">Last Name</label> <s:textfield
-							name="student.lastName" label="Last Name" /></td>
+					<td><label for="student.lastName">Last Name</label></td>
+					<td><s:textfield name="student.lastName" label="Last Name" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.streetAddress">Street Address</label>
-						<s:textfield name="student.streetAddress" label="Street Address" /></td>
+					<td><label for="student.streetAddress">Street Address</label></td>
+					<td><s:textfield name="student.streetAddress"
+							label="Street Address" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.city">City</label> <s:textfield
-							name="student.city" label="City" /></td>
+					<td><label for="student.city">City</label></td>
+					<td><s:textfield name="student.city" label="City" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.state">State</label> <s:textfield
-							name="student.state" label="State" /></td>
+					<td><label for="student.state">State</label></td>
+					<td><s:textfield name="student.state" label="State" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.phone">Phone</label> <s:textfield
-							name="student.phone" label="Phone" /></td>
+					<td><label for="student.phone">Phone</label></td>
+					<td><s:textfield name="student.phone" label="Phone" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.email">Mail</label> <s:textfield
-							name="student.email" label="Email" /></td>
+					<td><label for="student.email">Mail</label></td>
+					<td><s:textfield name="student.email" label="Email" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.surveyDate">Survey Date</label> <s:textfield
-							name="student.surveyDate" label="Survey Date" id="surveydate" /></td>
+					<td><label for="student.surveyDate">Survey Date</label></td>
+					<td><s:textfield name="student.surveyDate" label="Survey Date"
+							id="surveydate" /></td>
 				</tr>
 				<tr>
 					<td><label for="student.likedAboutSchool" class="form-label">
@@ -79,15 +90,16 @@
 							list="recommendationlist" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.raffle">Raffle</label> <s:textfield
-							name="student.raffle"
+					<td><label for="student.raffle">Raffle</label></td>
+					<td><s:textfield name="student.raffle"
 							label="Enter
 							10 numbers between 1 and 100 separated by comma to win a raffle
 							ticket to movie" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.comments">Comments </label> <s:textarea
-							name="student.comments" label="Comments" rows="5" cols="30" /></td>
+					<td><label for="student.comments">Comments </label></td>
+					<td><s:textarea name="student.comments" label="Comments"
+							rows="5" cols="30" /></td>
 				</tr>
 				<tr>
 					<td align="left"><s:submit class="submit-button form-submit" /></td>
