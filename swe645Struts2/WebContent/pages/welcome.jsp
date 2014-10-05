@@ -1,3 +1,7 @@
+<!-- 
+Lakshmi Venkataiah
+This is welcome page of the application which has links to create survey and list survey pages 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>

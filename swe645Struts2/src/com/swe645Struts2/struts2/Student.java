@@ -1,3 +1,8 @@
+/*
+ * Lakshmi Venkataiah
+ * This is a survey model class which has all the form data
+ */
+
 package com.swe645Struts2.struts2;
 
 import java.io.Serializable;

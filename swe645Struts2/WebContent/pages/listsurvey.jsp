@@ -1,3 +1,7 @@
+<!-- 
+Lakshmi Venkataiah
+This is list survey jsp file which shows list of surveys data.
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>

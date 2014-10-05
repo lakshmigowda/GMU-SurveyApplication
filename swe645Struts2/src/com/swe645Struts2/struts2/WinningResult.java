@@ -1,3 +1,7 @@
+/*
+ * Lakshmi Venkataiah
+ * This is a winning result model class which holds mean and standard deviation result data
+ */
 package com.swe645Struts2.struts2;
 
 public class WinningResult {

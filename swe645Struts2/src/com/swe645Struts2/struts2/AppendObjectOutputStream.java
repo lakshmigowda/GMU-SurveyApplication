@@ -1,3 +1,8 @@
+/*
+ * Lakshmi Venkataiah
+ * This class is used to append new objects to text file which stores student survey object data
+ */
+
 package com.swe645Struts2.struts2;
 
 import java.io.IOException;

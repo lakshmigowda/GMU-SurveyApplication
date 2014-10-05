@@ -1,3 +1,9 @@
+/*
+ * Lakshmi Venkataiah
+ * This is the service class which has business logic implementation of storing survey objects, get list of survey objects, 
+ * calculating mean and standard deviation methods.
+ */
+
 package com.swe645Struts2.struts2;
 
 import java.io.EOFException;

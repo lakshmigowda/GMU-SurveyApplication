@@ -1,3 +1,8 @@
+/*
+ * Lakshmi Venkataiah
+ * This class provides action methods for creating a survey form and listing survey results.
+ * It also provides recommendation, liking and interest list data required for survey form
+ */
 package com.swe645Struts2.struts2;
 
 import java.util.ArrayList;

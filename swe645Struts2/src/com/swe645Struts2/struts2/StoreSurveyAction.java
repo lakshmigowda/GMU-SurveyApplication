@@ -1,3 +1,8 @@
+/*
+ * Lakshmi Venkataiah
+ * This class provides action method for storing the survey forma data. It calls Studentservice class methods.
+ */
+
 package com.swe645Struts2.struts2;
 
 import java.io.IOException;
