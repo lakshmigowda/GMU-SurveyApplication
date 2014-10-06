@@ -10,8 +10,13 @@ This is simple acknowledgement page which displays name, mean and sd
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Welcome Page</title>
+<style type="text/css">
+.body {
+	background-color: #CCEEFF;
+}
+</style>
 </head>
-<body>
+<body class="body">
 	<div class="form-container">
 		<h1 class="label">Thanks for submitting the survey!</h1>
 		<p class="label">Survey Results</p>

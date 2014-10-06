@@ -10,9 +10,14 @@ This is list survey jsp file which shows list of surveys data.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Survey Form</title>
+<style type="text/css">
+.body {
+	background-color: #CCEEFF;
+}
+</style>
 </head>
 
-<body>
+<body class="body">
 	<button onclick="location.href='/swe645Struts2/welcome'"
 		class="submit-button">Back to welcome!</button>
 	<div class="form-container">

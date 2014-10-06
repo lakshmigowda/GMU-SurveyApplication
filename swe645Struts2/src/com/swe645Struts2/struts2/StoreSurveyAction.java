@@ -62,6 +62,10 @@ public class StoreSurveyAction extends ActionSupport implements
 					|| student.getSurveyDate().toString().isEmpty()) {
 				addActionError("Survey date is required!");
 			}
+			if (student.getRaffle() == null
+					|| student.getRaffle().toString().isEmpty()) {
+				addActionError("Raffle field is required!");
+			}
 		}
 
 		else {

@@ -10,8 +10,13 @@ This is welcome page of the application which has links to create survey and lis
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Welcome Page</title>
+<style type="text/css">
+.body {
+	background-color: #CCEEFF;
+}
+</style>
 </head>
-<body>
+<body class="body">
 	<div class="form-container">
 		<h1 class="label">Welcome to Volgenau School!!!</h1>
 		<p class="label">
