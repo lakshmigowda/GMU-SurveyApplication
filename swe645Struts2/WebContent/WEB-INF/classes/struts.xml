@@ -5,28 +5,31 @@
 <struts>
 	<constant name="struts.devMode" value="false" />
 	<constant name="struts.ui.theme" value="simple" />
-	<package name="helloworld" extends="struts-default">
+	<package name="helloworld" extends="tiles-default">
 
 		<action name="welcome" class="com.swe645Struts2.struts2.WelcomeAction"
 			method="welcome">
-			<result name="welcome">/pages/welcome.jsp</result>
+			<result name="welcome" type="tiles">welcome</result>
 		</action>
 
 		<action name="createsurvey" class="com.swe645Struts2.struts2.WelcomeAction"
 			method="createsurvey">
-			<result name="studentsurvey">/pages/studentsurvey.jsp</result>
+			<result name="studentsurvey" type="tiles">studentsurvey
+			</result>
 		</action>
 
 		<action name="storesurvey" class="com.swe645Struts2.struts2.StoreSurveyAction"
 			method="storesurvey">
-			<result name="input">/pages/studentsurvey.jsp</result>
-			<result name="surveyresult">/pages/SimpleAcknowledgement.jsp</result>
-			<result name="winnersurveyresult">/pages/WinnerAcknowledgement.jsp</result>
+			<result name="input" type="tiles">studentsurvey</result>
+			<result name="surveyresult" type="tiles">SimpleAcknowledgement
+			</result>
+			<result name="winnersurveyresult" type="tiles">WinnerAcknowledgement
+			</result>
 		</action>
 
 		<action name="surveylist" class="com.swe645Struts2.struts2.WelcomeAction"
 			method="surveylist">
-			<result name="listsurvey">/pages/listsurvey.jsp</result>
+			<result name="listsurvey" type="tiles">listsurvey</result>
 		</action>
 
 	</package>
