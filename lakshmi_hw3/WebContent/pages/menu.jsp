@@ -12,5 +12,7 @@
 		class="submit-button">Create Survey</button>
 	<button onclick="location.href='/lakshmi_hw3/surveylist'"
 		class="submit-button">Survey List</button>
+	<button onclick="location.href='/lakshmi_hw3/searchsurvey'"
+		class="submit-button">Search survey</button>
 </body>
 </html>

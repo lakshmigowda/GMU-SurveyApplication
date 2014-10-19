@@ -9,7 +9,7 @@ This is list survey jsp file which shows list of surveys data.
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Survey Form</title>
+<title>Search survey</title>
 <style type="text/css">
 .body {
 	background-color: #CCEEFF;
@@ -18,8 +18,36 @@ This is list survey jsp file which shows list of surveys data.
 </head>
 
 <body class="body">
+	<s:form action="getfilteredsurveys.action">
+		<div class="form-title">
+			<p>Search student surveys!</p>
+		</div>
+		<table>
+			<tr>
+				<td><label for="search.firstName">First Name</label></td>
+				<td><s:textfield name="search.firstName" label="First Name" /></td>
+			</tr>
+			<tr>
+				<td><label for="search.lastName">Last Name</label></td>
+				<td><s:textfield name="search.lastName" label="Last Name" /></td>
+			</tr>
+			<tr>
+				<td><label for="search.city">City</label></td>
+				<td><s:textfield name="search.city" label="City" /></td>
+			</tr>
+			<tr>
+				<td><label for="search.state">State</label></td>
+				<td><s:textfield name="search.state" label="State" /></td>
+			</tr>
+
+			<tr>
+				<td align="left"><s:submit class="submit-button form-submit" /></td>
+			</tr>
+		</table>
+	</s:form>
+
 	<div class="form-container">
-		<h1>List of all the surveys!</h1>
+		<h4>List of filtered surveys!</h4>
 		<table border="1px solid">
 			<tr>
 				<th>First Name</th>
@@ -55,6 +83,7 @@ This is list survey jsp file which shows list of surveys data.
 			</s:iterator>
 		</table>
 	</div>
+	<br>
 	<button onclick="location.href='/lakshmi_hw3/welcome'"
 		class="submit-button">Back to homepage!</button>
 

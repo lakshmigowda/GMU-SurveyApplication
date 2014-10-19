@@ -6,7 +6,10 @@ import javax.ejb.Remote;
 
 @Remote
 public interface SurveyInterface {
+
 	public String storeSurvey(Student student);
 
 	public ArrayList<Student> getSurveylist();
+
+	public ArrayList<Student> searchSurvey(Search search);
 }

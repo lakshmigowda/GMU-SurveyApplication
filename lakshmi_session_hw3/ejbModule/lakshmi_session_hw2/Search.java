@@ -1,6 +1,13 @@
 package lakshmi_session_hw2;
 
-public class Search {
+import java.io.Serializable;
+
+public class Search implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -578941717489281369L;
 
 	private String firstName;
 	private String lastName;

@@ -7,14 +7,26 @@
 	<constant name="struts.ui.theme" value="simple" />
 	<package name="helloworld" extends="tiles-default">
 
-		<action name="welcome" class="com.swe645Assign3.Client.WelcomeAction"
+		<action name="welcome" class="com.swe645Assign3.Client.HomeAction"
 			method="welcome">
 			<result name="welcome" type="tiles">welcome</result>
 		</action>
 
-		<action name="createsurvey" class="com.swe645Assign3.Client.WelcomeAction"
+		<action name="createsurvey" class="com.swe645Assign3.Client.HomeAction"
 			method="createsurvey">
 			<result name="studentsurvey" type="tiles">studentsurvey
+			</result>
+		</action>
+
+		<action name="searchsurvey" class="com.swe645Assign3.Client.HomeAction"
+			method="searchsurvey">
+			<result name="searchsurvey" type="tiles">searchsurvey
+			</result>
+		</action>
+
+		<action name="getfilteredsurveys" class="com.swe645Assign3.Client.HomeAction"
+			method="getFilteredSurveyList">
+			<result name="searchsurvey" type="tiles">searchsurvey
 			</result>
 		</action>
 
@@ -27,8 +39,8 @@
 			</result>
 		</action>
 
-		<action name="surveylist" class="com.swe645Assign3.Client.WelcomeAction"
-			method="surveylist">
+		<action name="surveylist" class="com.swe645Assign3.Client.HomeAction"
+			method="getAllSurveylist">
 			<result name="listsurvey" type="tiles">listsurvey</result>
 		</action>
 

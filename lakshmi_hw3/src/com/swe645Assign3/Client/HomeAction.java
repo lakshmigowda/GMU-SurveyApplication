@@ -18,7 +18,7 @@ import lakshmi_session_hw2.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class WelcomeAction extends ActionSupport {
+public class HomeAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1737969409761132346L;
 
@@ -28,36 +28,41 @@ public class WelcomeAction extends ActionSupport {
 
 	private ArrayList<Student> surveylist;
 
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
-	public Search getSearch() {
-		return search;
-	}
-
-	public void setSearch(Search search) {
-		this.search = search;
-	}
-
-	public ArrayList<Student> getSurveylist() {
-		return surveylist;
-	}
-
-	public void setSurveylist(ArrayList<Student> surveylist) {
-		this.surveylist = surveylist;
-	}
-
 	public String welcome() {
 		return "welcome";
 	}
 
 	public String createsurvey() {
 		return "studentsurvey";
+	}
+
+	public String getAllSurveylist() throws NamingException {
+		if (surveylist != null) {
+			surveylist.clear();
+		}
+		Context ctx = new InitialContext();
+		SurveyInterface surveyInterface = (SurveyInterface) ctx
+				.lookup("SurveyImpl");
+		surveylist = surveyInterface.getSurveylist();
+		return "listsurvey";
+	}
+
+	public String getFilteredSurveyList() throws NamingException {
+		if (surveylist != null) {
+			surveylist.clear();
+		}
+		Context ctx = new InitialContext();
+		SurveyInterface surveyInterface = (SurveyInterface) ctx
+				.lookup("SurveyImpl");
+		surveylist = surveyInterface.searchSurvey(search);
+		return "searchsurvey";
+	}
+
+	public String searchsurvey() {
+		if (surveylist != null) {
+			surveylist.clear();
+		}
+		return "searchsurvey";
 	}
 
 	public List<String> getRecommendationlist() {
@@ -88,12 +93,27 @@ public class WelcomeAction extends ActionSupport {
 		return interestlist;
 	}
 
-	public String surveylist() throws NamingException {
-		Context ctx = new InitialContext();
-		SurveyInterface surveyInterface = (SurveyInterface) ctx
-				.lookup("SurveyImpl");
-		surveylist = surveyInterface.getSurveylist();
-		return "listsurvey";
+	public Student getStudent() {
+		return student;
 	}
 
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Search getSearch() {
+		return search;
+	}
+
+	public void setSearch(Search search) {
+		this.search = search;
+	}
+
+	public ArrayList<Student> getSurveylist() {
+		return surveylist;
+	}
+
+	public void setSurveylist(ArrayList<Student> surveylist) {
+		this.surveylist = surveylist;
+	}
 }

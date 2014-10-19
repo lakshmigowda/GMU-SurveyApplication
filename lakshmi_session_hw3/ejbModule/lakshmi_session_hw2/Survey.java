@@ -157,4 +157,21 @@ public class Survey implements SurveyInterface, Serializable {
 		}
 		return "success";
 	}
+
+	@Override
+	public ArrayList<Student> searchSurvey(Search search) {
+		ArrayList<Student> surveyList = getSurveylist();
+		ArrayList<Student> filteredList = new ArrayList<Student>();
+		Iterator<Student> iterator = surveyList.iterator();
+		while (iterator.hasNext()) {
+			Student survey = iterator.next();
+			if (survey.getFirstName().contains(search.getLastName())
+					|| survey.getLastName().contains(search.getLastName())
+					|| survey.getCity().contains(search.getCity())
+					|| survey.getState().contains(search.getState())) {
+				filteredList.add(survey);
+			}
+		}
+		return filteredList;
+	}
 }

@@ -55,6 +55,7 @@ This is list survey jsp file which shows list of surveys data.
 			</s:iterator>
 		</table>
 	</div>
+	<br>
 	<button onclick="location.href='/lakshmi_hw3/welcome'"
 		class="submit-button">Back to homepage!</button>
 
