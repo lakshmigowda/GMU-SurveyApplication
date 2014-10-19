@@ -165,7 +165,7 @@ public class Survey implements SurveyInterface, Serializable {
 		Iterator<Student> iterator = surveyList.iterator();
 		while (iterator.hasNext()) {
 			Student survey = iterator.next();
-			if (survey.getFirstName().contains(search.getLastName())
+			if (survey.getFirstName().contains(search.getFirstName())
 					|| survey.getLastName().contains(search.getLastName())
 					|| survey.getCity().contains(search.getCity())
 					|| survey.getState().contains(search.getState())) {

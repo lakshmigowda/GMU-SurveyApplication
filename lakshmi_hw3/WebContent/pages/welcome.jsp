@@ -18,7 +18,7 @@ This is welcome page of the application which has links to create survey and lis
 </head>
 <body class="body">
 	<div class="form-container">
-		<h1 class="label">Welcome to Volgenau School!!!</h1>
+		<h3 class="label">Welcome to Volgenau School!</h3>
 		<p class="label">
 			Volgenau School wishes to conduct students survey to know about
 			student's satisfaction about various aspects of School. Kindly,

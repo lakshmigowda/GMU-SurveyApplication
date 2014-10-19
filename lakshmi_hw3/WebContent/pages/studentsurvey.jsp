@@ -35,7 +35,7 @@ This is student survey page which has a form to get all the survey data
 		</s:if>
 		<s:form action="storesurvey.action">
 			<div class="form-title">
-				<h2>Welcome to Volgenau School's Student Survey!!</h2>
+				<h3>Create Student Survey!</h3>
 			</div>
 			<table>
 				<tr>
@@ -91,11 +91,10 @@ This is student survey page which has a form to get all the survey data
 							list="recommendationlist" /></td>
 				</tr>
 				<tr>
-					<td><label for="student.raffle">Enter
-							10 numbers between 1 and 100 separated by comma to win a raffle
-							ticket to movie</label></td>
-					<td><s:textfield name="student.raffle"
-							label="Raffle" /></td>
+					<td><label for="student.raffle">Enter 10 numbers
+							between 1 and 100 separated by comma to win a raffle ticket to
+							movie</label></td>
+					<td><s:textfield name="student.raffle" label="Raffle" /></td>
 				</tr>
 				<tr>
 					<td><label for="student.comments">Comments </label></td>
@@ -107,6 +106,7 @@ This is student survey page which has a form to get all the survey data
 				</tr>
 			</table>
 		</s:form>
+		<br>
 		<button onclick="location.href='/lakshmi_hw3/welcome'"
 			class="submit-button">Cancel</button>
 	</div>

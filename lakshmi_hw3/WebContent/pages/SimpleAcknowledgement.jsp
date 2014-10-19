@@ -18,7 +18,7 @@ This is simple acknowledgement page which displays name, mean and sd
 </head>
 <body class="body">
 	<div class="form-container">
-		<h1 class="label">Thanks for submitting the survey!</h1>
+		<h3 class="label">Thanks for submitting the survey!</h3>
 		<p class="label">Survey Results</p>
 		<p>
 			Name:

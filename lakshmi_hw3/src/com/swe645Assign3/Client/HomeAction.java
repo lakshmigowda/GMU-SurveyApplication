@@ -55,7 +55,7 @@ public class HomeAction extends ActionSupport {
 		SurveyInterface surveyInterface = (SurveyInterface) ctx
 				.lookup("SurveyImpl");
 		surveylist = surveyInterface.searchSurvey(search);
-		return "searchsurvey";
+		return "filteredsurveys";
 	}
 
 	public String searchsurvey() {

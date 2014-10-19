@@ -20,7 +20,7 @@ This is list survey jsp file which shows list of surveys data.
 <body class="body">
 	<s:form action="getfilteredsurveys.action">
 		<div class="form-title">
-			<p>Search student surveys!</p>
+			<h3>Search student surveys!</h3>
 		</div>
 		<table>
 			<tr>
@@ -46,43 +46,6 @@ This is list survey jsp file which shows list of surveys data.
 		</table>
 	</s:form>
 
-	<div class="form-container">
-		<h4>List of filtered surveys!</h4>
-		<table border="1px solid">
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Address</th>
-				<th>City</th>
-				<th>State</th>
-				<th>Phone</th>
-				<th>Email</th>
-				<th>Survey Date</th>
-				<th>Most Liked</th>
-				<th>Interest</th>
-				<th>Recommend</th>
-				<th>Raffle</th>
-				<th>Comments</th>
-			</tr>
-			<s:iterator value="surveylist">
-				<tr>
-					<td><s:property value="firstName" /></td>
-					<td><s:property value="lastName" /></td>
-					<td><s:property value="streetAddress" /></td>
-					<td><s:property value="city" /></td>
-					<td><s:property value="state" /></td>
-					<td><s:property value="phone" /></td>
-					<td><s:property value="email" /></td>
-					<td><s:property value="surveyDate" /></td>
-					<td><s:property value="likedAboutSchool" /></td>
-					<td><s:property value="interest" /></td>
-					<td><s:property value="recommend" /></td>
-					<td><s:property value="raffle" /></td>
-					<td><s:property value="comments" /></td>
-				</tr>
-			</s:iterator>
-		</table>
-	</div>
 	<br>
 	<button onclick="location.href='/lakshmi_hw3/welcome'"
 		class="submit-button">Back to homepage!</button>

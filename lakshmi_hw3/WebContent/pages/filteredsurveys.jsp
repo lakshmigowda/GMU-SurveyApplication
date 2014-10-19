@@ -9,7 +9,7 @@ This is list survey jsp file which shows list of surveys data.
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Survey Form</title>
+<title>Search survey</title>
 <style type="text/css">
 .body {
 	background-color: #CCEEFF;
@@ -18,8 +18,9 @@ This is list survey jsp file which shows list of surveys data.
 </head>
 
 <body class="body">
+
 	<div class="form-container">
-		<h3>List of all the surveys!</h3>
+		<h3>List of filtered surveys!</h3>
 		<table border="1px solid">
 			<tr>
 				<th>First Name</th>
@@ -55,6 +56,10 @@ This is list survey jsp file which shows list of surveys data.
 			</s:iterator>
 		</table>
 	</div>
+	<br>
+	<button onclick="location.href='/lakshmi_hw3/searchsurvey'"
+		class="submit-button">Search again!</button>
+	<br>
 	<br>
 	<button onclick="location.href='/lakshmi_hw3/welcome'"
 		class="submit-button">Back to homepage!</button>

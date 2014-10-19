@@ -26,7 +26,7 @@
 
 		<action name="getfilteredsurveys" class="com.swe645Assign3.Client.HomeAction"
 			method="getFilteredSurveyList">
-			<result name="searchsurvey" type="tiles">searchsurvey
+			<result name="filteredsurveys" type="tiles">filteredsurveys
 			</result>
 		</action>
 

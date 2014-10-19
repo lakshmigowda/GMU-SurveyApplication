@@ -31,8 +31,13 @@
 
 
 	<definition name="searchsurvey" extends="baseLayout">
-		<put-attribute name="title" value="Create Survey" />
+		<put-attribute name="title" value="Search Survey" />
 		<put-attribute name="body" value="/pages/searchsurvey.jsp" />
+	</definition>
+
+	<definition name="filteredsurveys" extends="baseLayout">
+		<put-attribute name="title" value="Filtered Survey" />
+		<put-attribute name="body" value="/pages/filteredsurveys.jsp" />
 	</definition>
 
 	<definition name="welcome" extends="baseLayout">
