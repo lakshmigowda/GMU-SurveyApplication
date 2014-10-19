@@ -11,7 +11,7 @@
 	</appender>
 
 	<!-- Application Loggers -->
-	<logger name="lakshmi.swe645project.test">
+	<logger name="lakshmi.swe645Assign1.test">
 		<level value="info" />
 	</logger>
 

@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>swe645project</artifactId>
+	<artifactId>swe645Assign1</artifactId>
 	<name>projectName</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
@@ -154,5 +154,5 @@
             </plugin>
         </plugins>
     </build>
-    <groupId>lakshmi.swe645.project</groupId>
+    <groupId>swe645Assign1</groupId>
 </project>

@@ -24,7 +24,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
-	<context:component-scan base-package="lakshmi.swe645project.controller" />
+	<context:component-scan base-package="lakshmi.swe645Assign1.controller" />
 
 
 
