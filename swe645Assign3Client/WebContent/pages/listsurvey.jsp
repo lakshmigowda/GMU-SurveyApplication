@@ -18,7 +18,7 @@ This is list survey jsp file which shows list of surveys data.
 </head>
 
 <body class="body">
-	<button onclick="location.href='/swe645Struts2/welcome'"
+	<button onclick="location.href='/swe645Assign3Client/welcome'"
 		class="submit-button">Back to welcome!</button>
 	<div class="form-container">
 		<h1>List of all the surveys!</h1>

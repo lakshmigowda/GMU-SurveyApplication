@@ -23,11 +23,11 @@ This is welcome page of the application which has links to create survey and lis
 			Volgenau School wishes to conduct students survey to know about
 			student's satisfaction about various aspects of School. Kindly,
 			follow the below link to complete the survey.<br> <a
-				href="/swe645Struts2/createsurvey">Student Survey</a>
+				href="/swe645Assign3Client/createsurvey">Student Survey</a>
 		</p>
 		<p class="label">
 			You can also find the list of surveys submitted here<br> <a
-				href="/swe645Struts2/surveylist">Survey List</a>
+				href="/swe645Assign3Client/surveylist">Survey List</a>
 		</p>
 	</div>
 </body>

@@ -33,10 +33,10 @@ This is simple acknowledgement page which displays name, mean and sd
 			<s:property value="winningResult.standardDeviation" />
 		</p>
 		<p>
-			<a href="/swe645Struts2/welcome">Back to Welcome Page</a>
+			<a href="/swe645Assign3Client/welcome">Back to Welcome Page</a>
 		</p>
 		<p>
-			<a href="/swe645Struts2/createsurvey">Back to Create Survey Page</a>
+			<a href="/swe645Assign3Client/createsurvey">Back to Create Survey Page</a>
 		</p>
 	</div>
 </body>
