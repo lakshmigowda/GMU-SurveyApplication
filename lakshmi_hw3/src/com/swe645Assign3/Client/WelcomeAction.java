@@ -12,20 +12,45 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import lakshmi_session_hw2.Search;
 import lakshmi_session_hw2.Student;
 import lakshmi_session_hw2.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
 
-public class WelcomeAction extends ActionSupport implements
-		ModelDriven<Student> {
+public class WelcomeAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1737969409761132346L;
 
-	public Student student = new Student();
+	private Student student;
 
-	public ArrayList<Student> surveylist;
+	private Search search;
+
+	private ArrayList<Student> surveylist;
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Search getSearch() {
+		return search;
+	}
+
+	public void setSearch(Search search) {
+		this.search = search;
+	}
+
+	public ArrayList<Student> getSurveylist() {
+		return surveylist;
+	}
+
+	public void setSurveylist(ArrayList<Student> surveylist) {
+		this.surveylist = surveylist;
+	}
 
 	public String welcome() {
 		return "welcome";
@@ -69,10 +94,6 @@ public class WelcomeAction extends ActionSupport implements
 				.lookup("SurveyImpl");
 		surveylist = surveyInterface.getSurveylist();
 		return "listsurvey";
-	}
-
-	public Student getModel() {
-		return student;
 	}
 
 }

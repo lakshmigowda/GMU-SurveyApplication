@@ -17,17 +17,15 @@ import lakshmi_session_hw2.Student;
 import lakshmi_session_hw2.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
 
-public class StoreSurveyAction extends ActionSupport implements
-		ModelDriven<Student> {
+public class StoreSurveyAction extends ActionSupport {
 
 	private static final long serialVersionUID = -856188975521086019L;
 
-	public Student student = new Student();
-	public String name;
+	private Student student;
+	private String name;
 
-	public WinningResult winningResult = new WinningResult();
+	private WinningResult winningResult;
 
 	public String storesurvey() throws IOException, NamingException {
 		Context ctx = new InitialContext();
@@ -39,6 +37,7 @@ public class StoreSurveyAction extends ActionSupport implements
 		double average = StudentService.calculateAverage(student.getRaffle());
 		double sd = StudentService.calculateStandardDeviation(student
 				.getRaffle());
+		winningResult = new WinningResult();
 		winningResult.setMean(average);
 		winningResult.setStandardDeviation(sd);
 		name = student.getFirstName();
@@ -113,8 +112,28 @@ public class StoreSurveyAction extends ActionSupport implements
 		return interestlist;
 	}
 
-	public Student getModel() {
+	public Student getStudent() {
 		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public WinningResult getWinningResult() {
+		return winningResult;
+	}
+
+	public void setWinningResult(WinningResult winningResult) {
+		this.winningResult = winningResult;
 	}
 
 }
