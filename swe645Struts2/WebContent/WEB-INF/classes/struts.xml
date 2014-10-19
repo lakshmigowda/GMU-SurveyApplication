@@ -7,18 +7,18 @@
 	<constant name="struts.ui.theme" value="simple" />
 	<package name="helloworld" extends="tiles-default">
 
-		<action name="welcome" class="com.swe645Struts2.struts2.WelcomeAction"
+		<action name="welcome" class="com.swe645Assign2.struts2.WelcomeAction"
 			method="welcome">
 			<result name="welcome" type="tiles">welcome</result>
 		</action>
 
-		<action name="createsurvey" class="com.swe645Struts2.struts2.WelcomeAction"
+		<action name="createsurvey" class="com.swe645Assign2.struts2.WelcomeAction"
 			method="createsurvey">
 			<result name="studentsurvey" type="tiles">studentsurvey
 			</result>
 		</action>
 
-		<action name="storesurvey" class="com.swe645Struts2.struts2.StoreSurveyAction"
+		<action name="storesurvey" class="com.swe645Assign2.struts2.StoreSurveyAction"
 			method="storesurvey">
 			<result name="input" type="tiles">studentsurvey</result>
 			<result name="surveyresult" type="tiles">SimpleAcknowledgement
@@ -27,7 +27,7 @@
 			</result>
 		</action>
 
-		<action name="surveylist" class="com.swe645Struts2.struts2.WelcomeAction"
+		<action name="surveylist" class="com.swe645Assign2.struts2.WelcomeAction"
 			method="surveylist">
 			<result name="listsurvey" type="tiles">listsurvey</result>
 		</action>
