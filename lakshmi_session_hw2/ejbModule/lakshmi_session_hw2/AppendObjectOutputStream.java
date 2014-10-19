@@ -3,7 +3,7 @@
  * This class is used to append new objects to text file which stores student survey object data
  */
 
-package com.swe645Assign3.Client;
+package lakshmi_session_hw2;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;

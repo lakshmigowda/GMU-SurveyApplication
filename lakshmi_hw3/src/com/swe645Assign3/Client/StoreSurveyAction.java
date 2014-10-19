@@ -9,6 +9,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import lakshmi_session_hw2.Student;
+import lakshmi_session_hw2.SurveyInterface;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -22,8 +29,13 @@ public class StoreSurveyAction extends ActionSupport implements
 
 	public WinningResult winningResult = new WinningResult();
 
-	public String storesurvey() throws IOException {
-		StudentService.storesurvey(student);
+	public String storesurvey() throws IOException, NamingException {
+		Context ctx = new InitialContext();
+		SurveyInterface surveyInterface = (SurveyInterface) ctx
+				.lookup("SurveyImpl");
+
+		Student newStudent = StudentService.getCopy(student);
+		surveyInterface.storeSurvey(newStudent);
 		double average = StudentService.calculateAverage(student.getRaffle());
 		double sd = StudentService.calculateStandardDeviation(student
 				.getRaffle());

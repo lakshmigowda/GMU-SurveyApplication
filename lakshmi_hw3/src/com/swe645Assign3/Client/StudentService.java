@@ -6,58 +6,31 @@
 
 package com.swe645Assign3.Client;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+
+import lakshmi_session_hw2.Student;
 
 public class StudentService {
 
-	private static final String OBJECT_FILE = "C:\\survey\\surveyresults.txt";
+	public static Student getCopy(Student student) {
+		Student newStudent = new Student();
+		newStudent.setCity(student.getCity());
+		newStudent.setComments(student.getComments());
+		newStudent.setEmail(student.getEmail());
+		newStudent.setFirstName(student.getFirstName());
+		newStudent.setInterest(student.getInterest());
+		newStudent.setLastName(student.getLastName());
+		ArrayList<String> newLikingList = new ArrayList<String>();
+		newLikingList.addAll(student.getLikedAboutSchool());
+		newStudent.setLikedAboutSchool(newLikingList);
+		newStudent.setPhone(student.getPhone());
+		newStudent.setRaffle(student.getRaffle());
+		newStudent.setRecommend(student.getRecommend());
+		newStudent.setState(student.getState());
+		newStudent.setStreetAddress(student.getStreetAddress());
+		newStudent.setSurveyDate(student.getSurveyDate());
 
-	public static String storesurvey(Student student) throws IOException {
-		ObjectOutputStream os = null;
-		try {
-
-			File file = new File(OBJECT_FILE);
-
-			if (!file.exists())
-				os = new ObjectOutputStream(new FileOutputStream(OBJECT_FILE));
-
-			else
-				os = new AppendObjectOutputStream(new FileOutputStream(
-						OBJECT_FILE, true));
-
-			os.writeObject(student);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			os.close();
-		}
-		return "success";
-	}
-
-	public static ArrayList<Student> getSurveylist() {
-		ArrayList<Student> surveylist = new ArrayList<Student>();
-		try {
-			FileInputStream fis = new FileInputStream(OBJECT_FILE);
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			while (true) {
-				try {
-					surveylist.add((Student) ois.readObject());
-				} catch (EOFException e) {
-					ois.close();
-					return surveylist;
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return surveylist;
+		return newStudent;
 	}
 
 	public static double calculateAverage(String array) {

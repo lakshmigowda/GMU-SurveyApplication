@@ -8,6 +8,13 @@ package com.swe645Assign3.Client;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import lakshmi_session_hw2.Student;
+import lakshmi_session_hw2.SurveyInterface;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -56,8 +63,11 @@ public class WelcomeAction extends ActionSupport implements
 		return interestlist;
 	}
 
-	public String surveylist() {
-		surveylist = StudentService.getSurveylist();
+	public String surveylist() throws NamingException {
+		Context ctx = new InitialContext();
+		SurveyInterface surveyInterface = (SurveyInterface) ctx
+				.lookup("SurveyImpl");
+		surveylist = surveyInterface.getSurveylist();
 		return "listsurvey";
 	}
 
