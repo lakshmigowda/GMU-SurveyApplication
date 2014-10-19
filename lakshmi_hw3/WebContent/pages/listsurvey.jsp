@@ -18,8 +18,6 @@ This is list survey jsp file which shows list of surveys data.
 </head>
 
 <body class="body">
-	<button onclick="location.href='/lakshmi_hw3/welcome'"
-		class="submit-button">Back to welcome!</button>
 	<div class="form-container">
 		<h1>List of all the surveys!</h1>
 		<table border="1px solid">
@@ -57,6 +55,8 @@ This is list survey jsp file which shows list of surveys data.
 			</s:iterator>
 		</table>
 	</div>
+	<button onclick="location.href='/lakshmi_hw3/welcome'"
+		class="submit-button">Back to homepage!</button>
 
 </body>
 </html>

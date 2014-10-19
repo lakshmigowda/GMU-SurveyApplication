@@ -10,12 +10,11 @@
 
 <body>
 	<tiles:insertAttribute name="header" />
-	<br />
+	<hr />
+	<tiles:insertAttribute name="menu" />
 	<hr />
 	<tiles:insertAttribute name="body" />
-	<br />
 	<hr />
 	<tiles:insertAttribute name="footer" />
-	<br />
 </body>
 </html>
