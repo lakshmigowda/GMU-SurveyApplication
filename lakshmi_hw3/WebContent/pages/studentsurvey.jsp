@@ -107,7 +107,7 @@ This is student survey page which has a form to get all the survey data
 				</tr>
 			</table>
 		</s:form>
-		<button onclick="location.href='/swe645Assign3Client/welcome'"
+		<button onclick="location.href='/lakshmi_hw3/welcome'"
 			class="submit-button">Cancel</button>
 	</div>
 </body>

@@ -1,6 +1,6 @@
 <!-- 
 Lakshmi Venkataiah
-This is winning acknowledgement page which displays winning message, name, mean and SD
+This is simple acknowledgement page which displays name, mean and sd 
  -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -18,7 +18,6 @@ This is winning acknowledgement page which displays winning message, name, mean 
 </head>
 <body class="body">
 	<div class="form-container">
-		<h1 class="label">Congratulations! You have won 2 movie tickets!</h1>
 		<h1 class="label">Thanks for submitting the survey!</h1>
 		<p class="label">Survey Results</p>
 		<p>
@@ -34,10 +33,10 @@ This is winning acknowledgement page which displays winning message, name, mean 
 			<s:property value="winningResult.standardDeviation" />
 		</p>
 		<p>
-			<a href="/swe645Assign3Client/welcome">Back to Welcome Page</a>
+			<a href="/lakshmi_hw3/welcome">Back to Welcome Page</a>
 		</p>
 		<p>
-			<a href="/swe645Assign3Client/createsurvey">Back to Create Survey Page</a>
+			<a href="/lakshmi_hw3/createsurvey">Back to Create Survey Page</a>
 		</p>
 	</div>
 </body>
