@@ -166,21 +166,50 @@ public class Survey implements SurveyInterface, Serializable {
 		while (iterator.hasNext()) {
 			Student survey = iterator.next();
 			boolean add = true;
-			if (!search.getFirstName().isEmpty()
-					&& !survey.getFirstName().matches(search.getFirstName())) {
-				add = false;
+			if (!search.getFirstName().isEmpty()) {
+				if (!search.getFirstName().contains("*")
+						&& !survey.getFirstName()
+								.matches(search.getFirstName())) {
+					add = false;
+				} else {
+					String[] values = search.getFirstName().split("\\*");
+					if (!survey.getFirstName().startsWith(values[0])) {
+						add = false;
+					}
+				}
 			}
-			if (!search.getLastName().isEmpty()
-					&& !survey.getLastName().matches(search.getLastName())) {
-				add = false;
+			if (!search.getLastName().isEmpty()) {
+				if (!search.getLastName().contains("*")
+						&& !survey.getLastName().matches(search.getLastName())) {
+					add = false;
+				} else {
+					String[] values = search.getLastName().split("\\*");
+					if (!survey.getLastName().startsWith(values[0])) {
+						add = false;
+					}
+				}
 			}
-			if (!search.getCity().isEmpty()
-					&& !survey.getCity().matches(search.getCity())) {
-				add = false;
+			if (!search.getCity().isEmpty()) {
+				if (!search.getCity().contains("*")
+						&& !survey.getCity().matches(search.getCity())) {
+					add = false;
+				} else {
+					String[] values = search.getCity().split("\\*");
+					if (!survey.getCity().startsWith(values[0])) {
+						add = false;
+					}
+				}
 			}
-			if (!search.getState().isEmpty()
-					&& !survey.getState().matches(search.getState())) {
-				add = false;
+			if (!search.getState().isEmpty()) {
+				if (!search.getState().contains("*")
+						&& !survey.getState().matches(search.getState())) {
+					add = false;
+				} else {
+					String[] values = search.getState().split("\\*");
+					if (!survey.getState().startsWith(values[0])) {
+						add = false;
+					}
+				}
 			}
 
 			if (add) {
