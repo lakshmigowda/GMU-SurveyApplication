@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,7 +40,8 @@ public class Survey implements SurveyInterface, Serializable {
 	 * @see lakshmi_session_hw2.SurveyInterface#getSurveylist()
 	 */
 	@Override
-	public ArrayList<Student> getSurveylist() {
+	public ArrayList<Student> getSurveylist() throws ClassNotFoundException,
+			SQLException, ParseException {
 		ArrayList<Student> surveylist = new ArrayList<Student>();
 		Connection conn = null;
 		Statement stmt = null;
@@ -89,22 +91,11 @@ public class Survey implements SurveyInterface, Serializable {
 			rs.close();
 			stmt.close();
 			conn.close();
-		} catch (SQLException se) {
-			se.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
-			try {
-				if (stmt != null)
-					stmt.close();
-			} catch (SQLException se2) {
-			}
-			try {
-				if (conn != null)
-					conn.close();
-			} catch (SQLException se) {
-				se.printStackTrace();
-			}
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
 		}
 		return surveylist;
 	}
@@ -117,7 +108,8 @@ public class Survey implements SurveyInterface, Serializable {
 	 * )
 	 */
 	@Override
-	public String storeSurvey(Student student) {
+	public String storeSurvey(Student student) throws ClassNotFoundException,
+			SQLException {
 		Connection conn = null;
 		Statement stmt = null;
 		try {
@@ -157,22 +149,11 @@ public class Survey implements SurveyInterface, Serializable {
 			int rs = stmt.executeUpdate(sql);
 			stmt.close();
 			conn.close();
-		} catch (SQLException se) {
-			se.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
-			try {
-				if (stmt != null)
-					stmt.close();
-			} catch (SQLException se2) {
-			}
-			try {
-				if (conn != null)
-					conn.close();
-			} catch (SQLException se) {
-				se.printStackTrace();
-			}
+			if (stmt != null)
+				stmt.close();
+			if (conn != null)
+				conn.close();
 		}
 		return "success";
 	}
@@ -186,7 +167,8 @@ public class Survey implements SurveyInterface, Serializable {
 	 * Search)
 	 */
 	@Override
-	public ArrayList<Student> searchSurvey(Search search) {
+	public ArrayList<Student> searchSurvey(Search search)
+			throws ClassNotFoundException, SQLException, ParseException {
 		ArrayList<Student> surveyList = getSurveylist();
 		ArrayList<Student> filteredList = new ArrayList<Student>();
 		Iterator<Student> iterator = surveyList.iterator();

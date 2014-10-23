@@ -1,5 +1,7 @@
 package lakshmi_session_hw2;
 
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import javax.ejb.Remote;
@@ -14,9 +16,12 @@ import javax.ejb.Remote;
 @Remote
 public interface SurveyInterface {
 
-	public String storeSurvey(Student student);
+	public String storeSurvey(Student student) throws ClassNotFoundException,
+			SQLException;
 
-	public ArrayList<Student> getSurveylist();
+	public ArrayList<Student> getSurveylist() throws ClassNotFoundException,
+			SQLException, ParseException;
 
-	public ArrayList<Student> searchSurvey(Search search);
+	public ArrayList<Student> searchSurvey(Search search)
+			throws ClassNotFoundException, SQLException, ParseException;
 }

@@ -50,15 +50,19 @@ public class HomeAction extends ActionSupport {
 	 * @return
 	 * @throws NamingException
 	 */
-	public String getAllSurveylist() throws NamingException {
-		if (surveylist != null) {
-			surveylist.clear();
+	public String getAllSurveylist() {
+		try {
+			if (surveylist != null) {
+				surveylist.clear();
+			}
+			Context ctx = new InitialContext();
+			// get ejb instance
+			SurveyInterface surveyInterface = (SurveyInterface) ctx
+					.lookup("SurveyImpl");
+			surveylist = surveyInterface.getSurveylist();
+		} catch (Exception e) {
+			return "error";
 		}
-		Context ctx = new InitialContext();
-		// get ejb instance
-		SurveyInterface surveyInterface = (SurveyInterface) ctx
-				.lookup("SurveyImpl");
-		surveylist = surveyInterface.getSurveylist();
 		return "listsurvey";
 	}
 
@@ -68,15 +72,19 @@ public class HomeAction extends ActionSupport {
 	 * @return
 	 * @throws NamingException
 	 */
-	public String getFilteredSurveyList() throws NamingException {
-		if (surveylist != null) {
-			surveylist.clear();
+	public String getFilteredSurveyList() {
+		try {
+			if (surveylist != null) {
+				surveylist.clear();
+			}
+			Context ctx = new InitialContext();
+			// get ejb instance
+			SurveyInterface surveyInterface = (SurveyInterface) ctx
+					.lookup("SurveyImpl");
+			surveylist = surveyInterface.searchSurvey(search);
+		} catch (Exception e) {
+			return "error";
 		}
-		Context ctx = new InitialContext();
-		// get ejb instance
-		SurveyInterface surveyInterface = (SurveyInterface) ctx
-				.lookup("SurveyImpl");
-		surveylist = surveyInterface.searchSurvey(search);
 		return "filteredsurveys";
 	}
 
@@ -86,8 +94,12 @@ public class HomeAction extends ActionSupport {
 	 * @return
 	 */
 	public String searchsurvey() {
-		if (surveylist != null) {
-			surveylist.clear();
+		try {
+			if (surveylist != null) {
+				surveylist.clear();
+			}
+		} catch (Exception e) {
+			return "error";
 		}
 		return "searchsurvey";
 	}

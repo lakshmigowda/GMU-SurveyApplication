@@ -42,21 +42,26 @@ public class StoreSurveyAction extends ActionSupport {
 	 * @throws IOException
 	 * @throws NamingException
 	 */
-	public String storesurvey() throws IOException, NamingException {
-		Context ctx = new InitialContext();
-		// get ebj instance
-		SurveyInterface surveyInterface = (SurveyInterface) ctx
-				.lookup("SurveyImpl");
+	public String storesurvey() {
+		double average = 0;
+		try {
+			Context ctx = new InitialContext();
+			// get ebj instance
+			SurveyInterface surveyInterface = (SurveyInterface) ctx
+					.lookup("SurveyImpl");
 
-		Student newStudent = StudentService.getCopy(student);
-		surveyInterface.storeSurvey(newStudent);
-		double average = StudentService.calculateAverage(student.getRaffle());
-		double sd = StudentService.calculateStandardDeviation(student
-				.getRaffle());
-		winningResult = new WinningResult();
-		winningResult.setMean(average);
-		winningResult.setStandardDeviation(sd);
-		name = student.getFirstName();
+			Student newStudent = StudentService.getCopy(student);
+			surveyInterface.storeSurvey(newStudent);
+			average = StudentService.calculateAverage(student.getRaffle());
+			double sd = StudentService.calculateStandardDeviation(student
+					.getRaffle());
+			winningResult = new WinningResult();
+			winningResult.setMean(average);
+			winningResult.setStandardDeviation(sd);
+			name = student.getFirstName();
+		} catch (Exception e) {
+			return "error";
+		}
 		if (average > 90)
 			return "winnersurveyresult";
 		else
