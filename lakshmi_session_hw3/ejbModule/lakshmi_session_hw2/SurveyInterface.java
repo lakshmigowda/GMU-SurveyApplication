@@ -4,6 +4,13 @@ import java.util.ArrayList;
 
 import javax.ejb.Remote;
 
+/**
+ * This is remote interface of the session ejb. It exposes all the
+ * methods/operations available in the ejb to clients
+ * 
+ * @author Lakshmi Venkataiah
+ *
+ */
 @Remote
 public interface SurveyInterface {
 

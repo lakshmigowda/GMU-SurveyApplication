@@ -9,6 +9,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * @author Lakshmi Venkataiah
+ * 
+ *         Represents the student survey entity
+ *
+ */
 public class Student implements Serializable {
 	private static final long serialVersionUID = -4873429200430939263L;
 

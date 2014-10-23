@@ -16,6 +16,12 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 
+/**
+ * @author Lakshmi Venkataiah
+ *
+ *         Thi is the session ejb, which provides implementation of
+ *         SurveyInterface interface
+ */
 @Stateless(mappedName = "SurveyImpl")
 public class Survey implements SurveyInterface, Serializable {
 
@@ -26,6 +32,12 @@ public class Survey implements SurveyInterface, Serializable {
 
 	private static final long serialVersionUID = 2357679544149954529L;
 
+	/*
+	 * This method provides survey list by contacting mysql database
+	 * (non-Javadoc)
+	 * 
+	 * @see lakshmi_session_hw2.SurveyInterface#getSurveylist()
+	 */
 	@Override
 	public ArrayList<Student> getSurveylist() {
 		ArrayList<Student> surveylist = new ArrayList<Student>();
@@ -97,6 +109,13 @@ public class Survey implements SurveyInterface, Serializable {
 		return surveylist;
 	}
 
+	/*
+	 * This method stores the survey data into mysql database
+	 * 
+	 * @see
+	 * lakshmi_session_hw2.SurveyInterface#storeSurvey(lakshmi_session_hw2.Student
+	 * )
+	 */
 	@Override
 	public String storeSurvey(Student student) {
 		Connection conn = null;
@@ -158,6 +177,14 @@ public class Survey implements SurveyInterface, Serializable {
 		return "success";
 	}
 
+	/*
+	 * This method searches the surveys by getting all the surveys from mysql
+	 * database and then filtering
+	 * 
+	 * @see
+	 * lakshmi_session_hw2.SurveyInterface#searchSurvey(lakshmi_session_hw2.
+	 * Search)
+	 */
 	@Override
 	public ArrayList<Student> searchSurvey(Search search) {
 		ArrayList<Student> surveyList = getSurveylist();

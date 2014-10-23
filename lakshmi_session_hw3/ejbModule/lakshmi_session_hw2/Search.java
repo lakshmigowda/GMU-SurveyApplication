@@ -2,11 +2,13 @@ package lakshmi_session_hw2;
 
 import java.io.Serializable;
 
+/**
+ * @author Lakshmi Venkataiah
+ *
+ *         Represents the search entity
+ */
 public class Search implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -578941717489281369L;
 
 	private String firstName;
