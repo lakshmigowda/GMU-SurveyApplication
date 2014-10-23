@@ -18,6 +18,14 @@ import lakshmi_session_hw2.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * This action class provides methods to handle the create survey, get survey
+ * list, search surveys requests. It calls the Survey session EJB methods, which
+ * provides the back end business logic implementation.
+ * 
+ * @author Lakshmi
+ *
+ */
 public class HomeAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1737969409761132346L;
@@ -36,28 +44,47 @@ public class HomeAction extends ActionSupport {
 		return "studentsurvey";
 	}
 
+	/**
+	 * Handles listing survey request
+	 * 
+	 * @return
+	 * @throws NamingException
+	 */
 	public String getAllSurveylist() throws NamingException {
 		if (surveylist != null) {
 			surveylist.clear();
 		}
 		Context ctx = new InitialContext();
+		// get ejb instance
 		SurveyInterface surveyInterface = (SurveyInterface) ctx
 				.lookup("SurveyImpl");
 		surveylist = surveyInterface.getSurveylist();
 		return "listsurvey";
 	}
 
+	/**
+	 * Handles search survey result request
+	 * 
+	 * @return
+	 * @throws NamingException
+	 */
 	public String getFilteredSurveyList() throws NamingException {
 		if (surveylist != null) {
 			surveylist.clear();
 		}
 		Context ctx = new InitialContext();
+		// get ejb instance
 		SurveyInterface surveyInterface = (SurveyInterface) ctx
 				.lookup("SurveyImpl");
 		surveylist = surveyInterface.searchSurvey(search);
 		return "filteredsurveys";
 	}
 
+	/**
+	 * Handles search survey request
+	 * 
+	 * @return
+	 */
 	public String searchsurvey() {
 		if (surveylist != null) {
 			surveylist.clear();

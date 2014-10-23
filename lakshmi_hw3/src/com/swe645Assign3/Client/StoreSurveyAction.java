@@ -18,6 +18,14 @@ import lakshmi_session_hw2.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * This action class provides method to handle store survey requests. It calls
+ * the Survey session EJB methods, which provides the back end business logic
+ * implementation.
+ * 
+ * @author Lakshmi
+ *
+ */
 public class StoreSurveyAction extends ActionSupport {
 
 	private static final long serialVersionUID = -856188975521086019L;
@@ -27,8 +35,16 @@ public class StoreSurveyAction extends ActionSupport {
 
 	private WinningResult winningResult;
 
+	/**
+	 * Handles store survey request
+	 * 
+	 * @return
+	 * @throws IOException
+	 * @throws NamingException
+	 */
 	public String storesurvey() throws IOException, NamingException {
 		Context ctx = new InitialContext();
+		// get ebj instance
 		SurveyInterface surveyInterface = (SurveyInterface) ctx
 				.lookup("SurveyImpl");
 

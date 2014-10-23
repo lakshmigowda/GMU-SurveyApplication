@@ -10,8 +10,20 @@ import java.util.ArrayList;
 
 import lakshmi_session_hw2.Student;
 
+/**
+ * @author Lakshmi
+ * 
+ *         Provides some utility functions
+ *
+ */
 public class StudentService {
 
+	/**
+	 * Provides copy of student survey object
+	 * 
+	 * @param student
+	 * @return
+	 */
 	public static Student getCopy(Student student) {
 		Student newStudent = new Student();
 		newStudent.setCity(student.getCity());
@@ -33,6 +45,12 @@ public class StudentService {
 		return newStudent;
 	}
 
+	/**
+	 * Calculates average
+	 * 
+	 * @param array
+	 * @return
+	 */
 	public static double calculateAverage(String array) {
 
 		String[] numbers = array.split(",");
@@ -47,6 +65,12 @@ public class StudentService {
 		return average / numbers.length;
 	}
 
+	/**
+	 * Calculates standard deviation
+	 * 
+	 * @param array
+	 * @return
+	 */
 	public static double calculateStandardDeviation(String array) {
 
 		String[] stringNumbers = array.split(",");

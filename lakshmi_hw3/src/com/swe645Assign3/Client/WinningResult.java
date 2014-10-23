@@ -4,6 +4,12 @@
  */
 package com.swe645Assign3.Client;
 
+/**
+ * Represents winnning result entity
+ * 
+ * @author Lakshmi
+ *
+ */
 public class WinningResult {
 	private double mean;
 	private double standardDeviation;
