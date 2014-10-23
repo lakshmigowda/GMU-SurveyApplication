@@ -24,6 +24,14 @@ This has welcome message and link to the survey page-->
 			follow the below link to complete the survey.<br> <a
 				href="/swe645Assign1/studentsurveypage">Student Survey</a>
 		</p>
+		<p class="label">
+			Link to second project<br> <a href="/swe645Assign2/welcome">Second
+				Project</a>
+		</p>
+		<p class="label">
+			Link to third project<br> <a href="/lakshmi_hw3/welcome">Third
+				project Survey</a>
+		</p>
 	</div>
 </body>
 </html>
