@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="helloworld" extends="tiles-default">
+
+		<action name="welcome" class="com.swe645Assign3.Client.HomeAction"
+			method="welcome">
+			<result name="welcome" type="tiles">welcome</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+
+		<action name="createsurvey" class="com.swe645Assign3.Client.HomeAction"
+			method="createsurvey">
+			<result name="studentsurvey" type="tiles">studentsurvey
+			</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+
+		<action name="searchsurvey" class="com.swe645Assign3.Client.HomeAction"
+			method="searchsurvey">
+			<result name="searchsurvey" type="tiles">searchsurvey
+			</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+
+		<action name="getfilteredsurveys" class="com.swe645Assign3.Client.HomeAction"
+			method="getFilteredSurveyList">
+			<result name="filteredsurveys" type="tiles">filteredsurveys
+			</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+
+		<action name="storesurvey" class="com.swe645Assign3.Client.StoreSurveyAction"
+			method="storesurvey">
+			<result name="input" type="tiles">studentsurvey</result>
+			<result name="surveyresult" type="tiles">SimpleAcknowledgement
+			</result>
+			<result name="winnersurveyresult" type="tiles">WinnerAcknowledgement
+			</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+
+		<action name="surveylist" class="com.swe645Assign3.Client.HomeAction"
+			method="getAllSurveylist">
+			<result name="listsurvey" type="tiles">listsurvey</result>
+			<result name="error" type="tiles">error</result>
+		</action>
+
+	</package>
+</struts>
