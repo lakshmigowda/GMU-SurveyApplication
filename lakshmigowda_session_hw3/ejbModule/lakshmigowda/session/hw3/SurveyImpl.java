@@ -1,4 +1,4 @@
-package lakshmigowda_session_hw3;
+package lakshmigowda.session.hw3;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -24,7 +24,7 @@ import javax.ejb.Stateless;
  *         SurveyInterface interface
  */
 @Stateless(mappedName = "SurveyImpl")
-public class Survey implements SurveyInterface, Serializable {
+public class SurveyImpl implements SurveyInterface, Serializable {
 
 	final String DB_URL = "jdbc:mysql://localhost:3306/surveys";
 

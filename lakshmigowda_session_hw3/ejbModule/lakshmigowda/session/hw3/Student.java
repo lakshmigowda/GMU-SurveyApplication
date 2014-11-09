@@ -3,7 +3,7 @@
  * This is a survey model class which has all the form data
  */
 
-package lakshmigowda_session_hw3;
+package lakshmigowda.session.hw3;
 
 import java.io.Serializable;
 import java.util.ArrayList;

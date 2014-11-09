@@ -8,7 +8,7 @@ package com.swe645Assign3.Client;
 
 import java.util.ArrayList;
 
-import lakshmigowda_session_hw3.Student;
+import lakshmigowda.session.hw3.Student;
 
 /**
  * @author Lakshmi

@@ -1,4 +1,4 @@
-package lakshmigowda_session_hw3;
+package lakshmigowda.session.hw3;
 
 import java.sql.SQLException;
 import java.text.ParseException;

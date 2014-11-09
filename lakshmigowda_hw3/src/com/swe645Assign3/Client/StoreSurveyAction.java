@@ -13,8 +13,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import lakshmigowda_session_hw3.Student;
-import lakshmigowda_session_hw3.SurveyInterface;
+import lakshmigowda.session.hw3.Student;
+import lakshmigowda.session.hw3.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
 
