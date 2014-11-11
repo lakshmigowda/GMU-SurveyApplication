@@ -2,9 +2,15 @@ package lakshmigowda.session.entities;
 
 // Generated Nov 11, 2014 1:30:50 AM by Hibernate Tools 3.4.0.CR1
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -63,6 +69,20 @@ public class SurveyHome {
 			Survey instance = entityManager.find(Survey.class, id);
 			log.debug("get successful");
 			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+
+	public List<Survey> getAllSurveys() {
+		try {
+			CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+			CriteriaQuery<Survey> cq = cb.createQuery(Survey.class);
+			Root<Survey> rootEntry = cq.from(Survey.class);
+			CriteriaQuery<Survey> all = cq.select(rootEntry);
+			TypedQuery<Survey> allQuery = entityManager.createQuery(all);
+			return allQuery.getResultList();
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
 			throw re;

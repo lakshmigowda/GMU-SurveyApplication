@@ -37,9 +37,7 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	@Override
 	public ArrayList<Student> getSurveylist() throws ClassNotFoundException,
 			SQLException, ParseException {
-		List<Survey> surveylist = null;
-
-		// surveyHome.getAllSurveys();
+		List<Survey> surveylist = surveyHome.getAllSurveys();
 
 		ArrayList<Student> studentList = Utility
 				.mapSurveyListToStudentList(surveylist);
