@@ -9,12 +9,12 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import lakshmigowda.session.appmodel.StudentAppModel;
 import lakshmigowda.session.entities.Survey;
-import lakshmigowda.session.hw3.Student;
 
 public class Utility {
 
-	public static Survey mapStudentToSurvey(Student student) {
+	public static Survey mapStudentToSurvey(StudentAppModel student) {
 		Survey survey = new Survey();
 		survey.setFirstName(student.getFirstName());
 		survey.setLastName(student.getLastName());
@@ -32,9 +32,9 @@ public class Utility {
 		return survey;
 	}
 
-	public static Student mapSurveyToStudent(Survey survey)
+	public static StudentAppModel mapSurveyToStudent(Survey survey)
 			throws ParseException {
-		Student student = new Student();
+		StudentAppModel student = new StudentAppModel();
 		student.setFirstName(survey.getFirstName());
 		student.setLastName(survey.getLastName());
 		student.setStreetAddress(survey.getStreetAddress());
@@ -66,14 +66,14 @@ public class Utility {
 		return student;
 	}
 
-	public static ArrayList<Student> mapSurveyListToStudentList(
+	public static ArrayList<StudentAppModel> mapSurveyListToStudentList(
 			List<Survey> surveyList) throws ParseException {
-		ArrayList<Student> studentList = new ArrayList<Student>();
+		ArrayList<StudentAppModel> studentList = new ArrayList<StudentAppModel>();
 		if (surveyList != null) {
 			Iterator<Survey> iterator = surveyList.iterator();
 			while (iterator.hasNext()) {
 				Survey survey = iterator.next();
-				Student student = mapSurveyToStudent(survey);
+				StudentAppModel student = mapSurveyToStudent(survey);
 				studentList.add(student);
 			}
 		}

@@ -8,7 +8,8 @@ package com.swe645Assign3.Client;
 
 import java.util.ArrayList;
 
-import lakshmigowda.session.hw3.Student;
+import lakshmigowda.session.appmodel.EmergencyContactAppModel;
+import lakshmigowda.session.appmodel.StudentAppModel;
 
 /**
  * @author Lakshmi
@@ -24,8 +25,8 @@ public class StudentService {
 	 * @param student
 	 * @return
 	 */
-	public static Student getCopy(Student student) {
-		Student newStudent = new Student();
+	public static StudentAppModel getCopy(StudentAppModel student) {
+		StudentAppModel newStudent = new StudentAppModel();
 		newStudent.setCity(student.getCity());
 		newStudent.setComments(student.getComments());
 		newStudent.setEmail(student.getEmail());
@@ -41,6 +42,13 @@ public class StudentService {
 		newStudent.setState(student.getState());
 		newStudent.setStreetAddress(student.getStreetAddress());
 		newStudent.setSurveyDate(student.getSurveyDate());
+
+		EmergencyContactAppModel emergencyContact = new EmergencyContactAppModel();
+		emergencyContact.setAddress(student.getEmergencyContact().getAddress());
+		emergencyContact.setEmail(student.getEmergencyContact().getEmail());
+		emergencyContact.setName(student.getEmergencyContact().getName());
+		emergencyContact.setPhone(student.getEmergencyContact().getPhone());
+		newStudent.setEmergencyContact(emergencyContact);
 
 		return newStudent;
 	}

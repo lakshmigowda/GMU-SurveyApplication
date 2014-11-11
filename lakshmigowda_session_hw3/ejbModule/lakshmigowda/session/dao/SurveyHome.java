@@ -1,6 +1,6 @@
-package lakshmigowda.session.entities;
+package lakshmigowda.session.dao;
 
-// Generated Nov 11, 2014 1:30:50 AM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 11, 2014 5:17:49 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 
@@ -11,6 +11,8 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
+import lakshmigowda.session.entities.Survey;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

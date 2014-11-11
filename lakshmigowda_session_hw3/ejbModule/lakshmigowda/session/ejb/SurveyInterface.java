@@ -1,10 +1,13 @@
-package lakshmigowda.session.hw3;
+package lakshmigowda.session.ejb;
 
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
 
 import javax.ejb.Remote;
+
+import lakshmigowda.session.appmodel.SearchAppModel;
+import lakshmigowda.session.appmodel.StudentAppModel;
 
 /**
  * This is remote interface of the session ejb. It exposes all the
@@ -16,12 +19,12 @@ import javax.ejb.Remote;
 @Remote
 public interface SurveyInterface {
 
-	public String storeSurvey(Student student) throws ClassNotFoundException,
+	public String storeSurvey(StudentAppModel student) throws ClassNotFoundException,
 			SQLException;
 
-	public ArrayList<Student> getSurveylist() throws ClassNotFoundException,
+	public ArrayList<StudentAppModel> getSurveylist() throws ClassNotFoundException,
 			SQLException, ParseException;
 
-	public ArrayList<Student> searchSurvey(Search search)
+	public ArrayList<StudentAppModel> searchSurvey(SearchAppModel search)
 			throws ClassNotFoundException, SQLException, ParseException;
 }

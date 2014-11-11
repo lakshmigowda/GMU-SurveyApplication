@@ -102,6 +102,33 @@ This is student survey page which has a form to get all the survey data
 							rows="5" cols="30" /></td>
 				</tr>
 				<tr>
+					<td colspan="2"><h4>Provide emergency information!</h4></td>
+				</tr>
+				<tr>
+					<td><label for="student.emergencyContact.name">Enter
+							name</label></td>
+					<td><s:textfield name="student.emergencyContact.name"
+							label="Name" /></td>
+				</tr>
+				<tr>
+					<td><label for="student.emergencyContact.name">Enter
+							email</label></td>
+					<td><s:textfield name="student.emergencyContact.email"
+							label="Email" /></td>
+				</tr>
+				<tr>
+					<td><label for="student.emergencyContact.name">Enter
+							phone</label></td>
+					<td><s:textfield name="student.emergencyContact.phone"
+							label="Phone" /></td>
+				</tr>
+				<tr>
+					<td><label for="student.emergencyContact.address">Enter
+							address</label></td>
+					<td><s:textfield name="student.emergencyContact.address"
+							label="Address" /></td>
+				</tr>
+				<tr>
 					<td align="left"><s:submit class="submit-button form-submit" /></td>
 				</tr>
 			</table>

@@ -13,8 +13,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import lakshmigowda.session.hw3.Student;
-import lakshmigowda.session.hw3.SurveyInterface;
+import lakshmigowda.session.appmodel.StudentAppModel;
+import lakshmigowda.session.ejb.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -30,7 +30,7 @@ public class StoreSurveyAction extends ActionSupport {
 
 	private static final long serialVersionUID = -856188975521086019L;
 
-	private Student student;
+	private StudentAppModel student;
 	private String name;
 
 	private WinningResult winningResult;
@@ -50,7 +50,7 @@ public class StoreSurveyAction extends ActionSupport {
 			SurveyInterface surveyInterface = (SurveyInterface) ctx
 					.lookup("SurveyImpl");
 
-			Student newStudent = StudentService.getCopy(student);
+			StudentAppModel newStudent = StudentService.getCopy(student);
 			surveyInterface.storeSurvey(newStudent);
 			average = StudentService.calculateAverage(student.getRaffle());
 			double sd = StudentService.calculateStandardDeviation(student
@@ -133,11 +133,11 @@ public class StoreSurveyAction extends ActionSupport {
 		return interestlist;
 	}
 
-	public Student getStudent() {
+	public StudentAppModel getStudent() {
 		return student;
 	}
 
-	public void setStudent(Student student) {
+	public void setStudent(StudentAppModel student) {
 		this.student = student;
 	}
 

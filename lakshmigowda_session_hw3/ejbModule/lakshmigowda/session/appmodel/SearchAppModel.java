@@ -1,4 +1,4 @@
-package lakshmigowda.session.hw3;
+package lakshmigowda.session.appmodel;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ import java.io.Serializable;
  *
  *         Represents the search entity
  */
-public class Search implements Serializable {
+public class SearchAppModel implements Serializable {
 
 	private static final long serialVersionUID = -578941717489281369L;
 

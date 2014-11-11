@@ -12,9 +12,9 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import lakshmigowda.session.hw3.Search;
-import lakshmigowda.session.hw3.Student;
-import lakshmigowda.session.hw3.SurveyInterface;
+import lakshmigowda.session.appmodel.SearchAppModel;
+import lakshmigowda.session.appmodel.StudentAppModel;
+import lakshmigowda.session.ejb.SurveyInterface;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -30,11 +30,11 @@ public class HomeAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1737969409761132346L;
 
-	private Student student;
+	private StudentAppModel student;
 
-	private Search search;
+	private SearchAppModel search;
 
-	private ArrayList<Student> surveylist;
+	private ArrayList<StudentAppModel> surveylist;
 
 	public String welcome() {
 		return "welcome";
@@ -132,27 +132,27 @@ public class HomeAction extends ActionSupport {
 		return interestlist;
 	}
 
-	public Student getStudent() {
+	public StudentAppModel getStudent() {
 		return student;
 	}
 
-	public void setStudent(Student student) {
+	public void setStudent(StudentAppModel student) {
 		this.student = student;
 	}
 
-	public Search getSearch() {
+	public SearchAppModel getSearch() {
 		return search;
 	}
 
-	public void setSearch(Search search) {
+	public void setSearch(SearchAppModel search) {
 		this.search = search;
 	}
 
-	public ArrayList<Student> getSurveylist() {
+	public ArrayList<StudentAppModel> getSurveylist() {
 		return surveylist;
 	}
 
-	public void setSurveylist(ArrayList<Student> surveylist) {
+	public void setSurveylist(ArrayList<StudentAppModel> surveylist) {
 		this.surveylist = surveylist;
 	}
 }

@@ -1,4 +1,4 @@
-package lakshmigowda.session.hw3;
+package lakshmigowda.session.ejb;
 
 import java.io.Serializable;
 import java.sql.SQLException;
@@ -6,12 +6,15 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
+import lakshmigowda.session.appmodel.SearchAppModel;
+import lakshmigowda.session.appmodel.StudentAppModel;
+import lakshmigowda.session.dao.SurveyHome;
 import lakshmigowda.session.entities.Survey;
-import lakshmigowda.session.entities.SurveyHome;
 import lakshmigowda.session.utility.Utility;
 
 /**
@@ -35,11 +38,11 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	 * @see lakshmigowda_session_hw2.SurveyInterface#getSurveylist()
 	 */
 	@Override
-	public ArrayList<Student> getSurveylist() throws ClassNotFoundException,
-			SQLException, ParseException {
+	public ArrayList<StudentAppModel> getSurveylist()
+			throws ClassNotFoundException, SQLException, ParseException {
 		List<Survey> surveylist = surveyHome.getAllSurveys();
 
-		ArrayList<Student> studentList = Utility
+		ArrayList<StudentAppModel> studentList = Utility
 				.mapSurveyListToStudentList(surveylist);
 
 		return studentList;
@@ -53,8 +56,10 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	 * .Student )
 	 */
 	@Override
-	public String storeSurvey(Student student) {
+	public String storeSurvey(StudentAppModel student) {
 		Survey survey = Utility.mapStudentToSurvey(student);
+		String uuid = UUID.randomUUID().toString();
+		survey.setId(uuid);
 		surveyHome.persist(survey);
 		return "success";
 	}
@@ -67,13 +72,13 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	 * lakshmigowda_session_hw3. Search)
 	 */
 	@Override
-	public ArrayList<Student> searchSurvey(Search search)
+	public ArrayList<StudentAppModel> searchSurvey(SearchAppModel search)
 			throws ClassNotFoundException, SQLException, ParseException {
-		ArrayList<Student> surveyList = getSurveylist();
-		ArrayList<Student> filteredList = new ArrayList<Student>();
-		Iterator<Student> iterator = surveyList.iterator();
+		ArrayList<StudentAppModel> surveyList = getSurveylist();
+		ArrayList<StudentAppModel> filteredList = new ArrayList<StudentAppModel>();
+		Iterator<StudentAppModel> iterator = surveyList.iterator();
 		while (iterator.hasNext()) {
-			Student survey = iterator.next();
+			StudentAppModel survey = iterator.next();
 			boolean add = true;
 			if (!search.getFirstName().isEmpty()) {
 				if (!search.getFirstName().contains("*")

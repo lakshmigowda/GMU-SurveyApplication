@@ -3,7 +3,7 @@
  * This is a survey model class which has all the form data
  */
 
-package lakshmigowda.session.hw3;
+package lakshmigowda.session.appmodel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.Date;
  *         Represents the student survey entity
  *
  */
-public class Student implements Serializable {
+public class StudentAppModel implements Serializable {
 	private static final long serialVersionUID = -4873429200430939263L;
 
 	private String firstName;
@@ -31,6 +31,8 @@ public class Student implements Serializable {
 	private String recommend;
 	private String raffle;
 	private String comments;
+
+	private EmergencyContactAppModel emergencyContact;
 
 	public String getFirstName() {
 		return firstName;
@@ -134,6 +136,14 @@ public class Student implements Serializable {
 
 	public void setComments(String comments) {
 		this.comments = comments;
+	}
+
+	public EmergencyContactAppModel getEmergencyContact() {
+		return emergencyContact;
+	}
+
+	public void setEmergencyContact(EmergencyContactAppModel emergencyContact) {
+		this.emergencyContact = emergencyContact;
 	}
 
 }
