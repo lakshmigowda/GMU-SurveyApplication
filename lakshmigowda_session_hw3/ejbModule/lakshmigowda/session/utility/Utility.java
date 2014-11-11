@@ -9,7 +9,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import lakshmigowda.session.appmodel.EmergencyContactAppModel;
 import lakshmigowda.session.appmodel.StudentAppModel;
+import lakshmigowda.session.entities.Emergencycontact;
 import lakshmigowda.session.entities.Survey;
 
 public class Utility {
@@ -78,5 +80,15 @@ public class Utility {
 			}
 		}
 		return studentList;
+	}
+
+	public static Emergencycontact mapECAModelToEC(
+			EmergencyContactAppModel emergencyContact) {
+		Emergencycontact eContact = new Emergencycontact();
+		eContact.setAddress(emergencyContact.getAddress());
+		eContact.setEmail(emergencyContact.getEmail());
+		eContact.setName(emergencyContact.getName());
+		eContact.setPhone(emergencyContact.getPhone());
+		return eContact;
 	}
 }

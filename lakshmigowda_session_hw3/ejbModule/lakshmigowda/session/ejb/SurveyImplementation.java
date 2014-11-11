@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 import javax.ejb.EJB;
@@ -13,7 +14,9 @@ import javax.ejb.Stateless;
 
 import lakshmigowda.session.appmodel.SearchAppModel;
 import lakshmigowda.session.appmodel.StudentAppModel;
+import lakshmigowda.session.dao.EmergencycontactHome;
 import lakshmigowda.session.dao.SurveyHome;
+import lakshmigowda.session.entities.Emergencycontact;
 import lakshmigowda.session.entities.Survey;
 import lakshmigowda.session.utility.Utility;
 
@@ -30,6 +33,9 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 
 	@EJB
 	SurveyHome surveyHome;
+
+	@EJB
+	EmergencycontactHome emergencyContactHome;
 
 	/*
 	 * This method provides survey list by contacting mysql database
@@ -58,9 +64,14 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	@Override
 	public String storeSurvey(StudentAppModel student) {
 		Survey survey = Utility.mapStudentToSurvey(student);
-		String uuid = UUID.randomUUID().toString();
-		survey.setId(uuid);
+		survey.setId(UUID.randomUUID().toString());
 		surveyHome.persist(survey);
+
+		Emergencycontact eContact = Utility.mapECAModelToEC(student
+				.getEmergencyContact());
+		eContact.setSurvey(survey);
+		eContact.setId(UUID.randomUUID().toString());
+		emergencyContactHome.persist(eContact);
 		return "success";
 	}
 
