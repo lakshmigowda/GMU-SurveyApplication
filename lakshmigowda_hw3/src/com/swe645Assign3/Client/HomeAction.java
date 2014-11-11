@@ -11,6 +11,9 @@ import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 
 import lakshmigowda.session.appmodel.SearchAppModel;
 import lakshmigowda.session.appmodel.StudentAppModel;
@@ -60,6 +63,23 @@ public class HomeAction extends ActionSupport {
 			SurveyInterface surveyInterface = (SurveyInterface) ctx
 					.lookup("SurveyImpl");
 			surveylist = surveyInterface.getSurveylist();
+		} catch (Exception e) {
+			return "error";
+		}
+		return "listsurvey";
+	}
+
+	public String deletesurvey() {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String id = request.getParameter("id");
+
+		try {
+			Context ctx = new InitialContext();
+			// get ebj instance
+			SurveyInterface surveyInterface = (SurveyInterface) ctx
+					.lookup("SurveyImpl");
+
+			surveyInterface.deleteSurvey(id);
 		} catch (Exception e) {
 			return "error";
 		}

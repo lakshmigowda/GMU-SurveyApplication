@@ -15,6 +15,18 @@ This is list survey jsp file which shows list of surveys data.
 	background-color: #CCEEFF;
 }
 </style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+	function deleteFunction(id) {
+		var url = "deletesurvey.action?id=" + id;
+		$.ajax({
+			url : url,
+			success : function(data) {
+				location.href = '/lakshmigowda_hw3/surveylist';
+			}
+		});
+	}
+</script>
 </head>
 
 <body class="body">
@@ -51,6 +63,9 @@ This is list survey jsp file which shows list of surveys data.
 					<td><s:property value="recommend" /></td>
 					<td><s:property value="raffle" /></td>
 					<td><s:property value="comments" /></td>
+					<td><button
+							onclick="deleteFunction('<s:property value="id" />')">Delete</button></td>
+
 				</tr>
 			</s:iterator>
 		</table>

@@ -4,6 +4,8 @@ package lakshmigowda.session.entities;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -191,7 +193,7 @@ public class Survey implements java.io.Serializable {
 		this.surveyDate = surveyDate;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "survey")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "survey", cascade = CascadeType.REMOVE)
 	public Set<Emergencycontact> getEmergencycontacts() {
 		return this.emergencycontacts;
 	}

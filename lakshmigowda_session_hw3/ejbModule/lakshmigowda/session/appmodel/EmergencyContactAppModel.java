@@ -11,6 +11,7 @@ public class EmergencyContactAppModel implements Serializable {
 	private String phone;
 	private String email;
 	private String address;
+	private String id;
 
 	public String getName() {
 		return name;
@@ -42,5 +43,13 @@ public class EmergencyContactAppModel implements Serializable {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 }

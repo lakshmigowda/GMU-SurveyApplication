@@ -19,12 +19,14 @@ import lakshmigowda.session.appmodel.StudentAppModel;
 @Remote
 public interface SurveyInterface {
 
-	public String storeSurvey(StudentAppModel student) throws ClassNotFoundException,
-			SQLException;
+	public String storeSurvey(StudentAppModel student)
+			throws ClassNotFoundException, SQLException;
 
-	public ArrayList<StudentAppModel> getSurveylist() throws ClassNotFoundException,
-			SQLException, ParseException;
+	public ArrayList<StudentAppModel> getSurveylist()
+			throws ClassNotFoundException, SQLException, ParseException;
 
 	public ArrayList<StudentAppModel> searchSurvey(SearchAppModel search)
 			throws ClassNotFoundException, SQLException, ParseException;
+
+	public String deleteSurvey(String id);
 }

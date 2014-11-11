@@ -64,6 +64,7 @@ public class Utility {
 		student.setRecommend(survey.getRecommend());
 		student.setRaffle(survey.getRaffle());
 		student.setComments(survey.getComments());
+		student.setId(survey.getId());
 
 		return student;
 	}

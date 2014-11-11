@@ -31,6 +31,7 @@ public class StudentAppModel implements Serializable {
 	private String recommend;
 	private String raffle;
 	private String comments;
+	private String id;
 
 	private EmergencyContactAppModel emergencyContact;
 
@@ -144,6 +145,14 @@ public class StudentAppModel implements Serializable {
 
 	public void setEmergencyContact(EmergencyContactAppModel emergencyContact) {
 		this.emergencyContact = emergencyContact;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }

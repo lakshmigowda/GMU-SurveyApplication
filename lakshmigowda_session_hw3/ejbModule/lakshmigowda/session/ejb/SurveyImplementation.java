@@ -54,6 +54,14 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 		return studentList;
 	}
 
+	@Override
+	public String deleteSurvey(String id) {
+		Survey survey = surveyHome.findById(id);
+		surveyHome.remove(survey);
+		return "success";
+
+	}
+
 	/*
 	 * This method stores the survey data into mysql database
 	 * 
