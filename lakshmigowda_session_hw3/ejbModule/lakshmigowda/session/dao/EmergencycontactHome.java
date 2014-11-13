@@ -15,7 +15,7 @@ import org.apache.commons.logging.LogFactory;
  * Home object for domain model class Emergencycontact.
  * 
  * @see lakshmigowda.session.entities.Emergencycontact
- * @author Hibernate Tools
+ * @author Lakshmi
  */
 @Stateless
 public class EmergencycontactHome {

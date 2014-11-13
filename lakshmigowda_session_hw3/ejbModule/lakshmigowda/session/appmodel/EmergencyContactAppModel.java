@@ -2,6 +2,11 @@ package lakshmigowda.session.appmodel;
 
 import java.io.Serializable;
 
+/**
+ * @author Lakshmi Venkataiah
+ *
+ *         Represents the emergency contact application model
+ */
 public class EmergencyContactAppModel implements Serializable {
 	/**
 	 * 

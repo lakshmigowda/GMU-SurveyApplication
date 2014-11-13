@@ -21,7 +21,7 @@ import org.apache.commons.logging.LogFactory;
  * Home object for domain model class Survey.
  * 
  * @see lakshmigowda.session.entities.Survey
- * @author Hibernate Tools
+ * @author Lakshmi
  */
 @Stateless
 public class SurveyHome {

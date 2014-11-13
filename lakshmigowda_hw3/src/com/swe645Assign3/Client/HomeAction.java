@@ -69,6 +69,11 @@ public class HomeAction extends ActionSupport {
 		return "listsurvey";
 	}
 
+	/**
+	 * Handles the delete survey request
+	 * 
+	 * @return
+	 */
 	public String deletesurvey() {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String id = request.getParameter("id");
@@ -90,7 +95,6 @@ public class HomeAction extends ActionSupport {
 	 * Handles search survey result request
 	 * 
 	 * @return
-	 * @throws NamingException
 	 */
 	public String getFilteredSurveyList() {
 		try {

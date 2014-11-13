@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * @author Lakshmi Venkataiah
  * 
- *         Represents the student survey entity
+ *         Represents the student survey application model
  *
  */
 public class StudentAppModel implements Serializable {

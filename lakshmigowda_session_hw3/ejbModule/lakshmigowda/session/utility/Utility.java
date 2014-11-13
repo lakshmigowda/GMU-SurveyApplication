@@ -14,6 +14,12 @@ import lakshmigowda.session.appmodel.StudentAppModel;
 import lakshmigowda.session.entities.Emergencycontact;
 import lakshmigowda.session.entities.Survey;
 
+/**
+ * Utility class for mapping
+ * 
+ * @author Lakshmi
+ *
+ */
 public class Utility {
 
 	public static Survey mapStudentToSurvey(StudentAppModel student) {
