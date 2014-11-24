@@ -10,13 +10,13 @@ This is menu part of the tiles
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-	<button onclick="location.href='/lakshmigowda_hw3/welcome'"
+	<button onclick="location.href='/lakshmigowda_hw4/welcome'"
 		class="submit-button">Homepage</button>
-	<button onclick="location.href='/lakshmigowda_hw3/createsurvey'"
+	<button onclick="location.href='/lakshmigowda_hw4/createsurvey'"
 		class="submit-button">Create Survey</button>
-	<button onclick="location.href='/lakshmigowda_hw3/surveylist'"
+	<button onclick="location.href='/lakshmigowda_hw4/surveylist'"
 		class="submit-button">Survey List</button>
-	<button onclick="location.href='/lakshmigowda_hw3/searchsurvey'"
+	<button onclick="location.href='/lakshmigowda_hw4/searchsurvey'"
 		class="submit-button">Search survey</button>
 </body>
 </html>

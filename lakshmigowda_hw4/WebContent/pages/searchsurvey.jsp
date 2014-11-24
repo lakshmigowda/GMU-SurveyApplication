@@ -47,7 +47,7 @@ This is list survey jsp file which shows list of surveys data.
 	</s:form>
 
 	<br>
-	<button onclick="location.href='/lakshmigowda_hw3/welcome'"
+	<button onclick="location.href='/lakshmigowda_hw4/welcome'"
 		class="submit-button">Back to homepage!</button>
 
 </body>

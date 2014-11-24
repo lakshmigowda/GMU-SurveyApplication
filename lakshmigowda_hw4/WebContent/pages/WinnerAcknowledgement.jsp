@@ -34,10 +34,10 @@ This is winning acknowledgement page which displays winning message, name, mean 
 			<s:property value="winningResult.standardDeviation" />
 		</p>
 		<p>
-			<a href="/lakshmigowda_hw3/welcome">Back to Welcome Page</a>
+			<a href="/lakshmigowda_hw4/welcome">Back to Welcome Page</a>
 		</p>
 		<p>
-			<a href="/lakshmigowda_hw3/createsurvey">Back to Create Survey Page</a>
+			<a href="/lakshmigowda_hw4/createsurvey">Back to Create Survey Page</a>
 		</p>
 	</div>
 </body>

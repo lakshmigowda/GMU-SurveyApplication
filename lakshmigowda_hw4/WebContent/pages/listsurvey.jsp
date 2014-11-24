@@ -22,7 +22,7 @@ This is list survey jsp file which shows list of surveys data.
 		$.ajax({
 			url : url,
 			success : function(data) {
-				location.href = '/lakshmigowda_hw3/surveylist';
+				location.href = '/lakshmigowda_hw4/surveylist';
 			}
 		});
 	}
@@ -71,7 +71,7 @@ This is list survey jsp file which shows list of surveys data.
 		</table>
 	</div>
 	<br>
-	<button onclick="location.href='/lakshmigowda_hw3/welcome'"
+	<button onclick="location.href='/lakshmigowda_hw4/welcome'"
 		class="submit-button">Back to homepage!</button>
 
 </body>

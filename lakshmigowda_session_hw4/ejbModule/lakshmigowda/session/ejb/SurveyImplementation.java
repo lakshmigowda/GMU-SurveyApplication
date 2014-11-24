@@ -65,7 +65,7 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	 * This method stores the survey data into mysql database
 	 * 
 	 * @see
-	 * lakshmigowda_session_hw3.SurveyInterface#storeSurvey(lakshmigowda_session_hw3
+	 * lakshmigowda_session_hw4.SurveyInterface#storeSurvey(lakshmigowda_session_hw3
 	 * .Student )
 	 */
 	@Override
@@ -86,8 +86,8 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	 * This method searches the surveys by getting all the surveys from mysql
 	 * database and then filtering
 	 * 
-	 * @see lakshmigowda_session_hw3.SurveyInterface#searchSurvey(
-	 * lakshmigowda_session_hw3. Search)
+	 * @see lakshmigowda_session_hw4.SurveyInterface#searchSurvey(
+	 * lakshmigowda_session_hw4. Search)
 	 */
 	@Override
 	public ArrayList<StudentAppModel> searchSurvey(SearchAppModel search)
