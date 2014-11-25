@@ -17,22 +17,6 @@
 		<put-attribute name="footer" value="/pages/footer.jsp" />
 	</definition>
 
-	<definition name="listsurvey" extends="baseLayout">
-		<put-attribute name="title" value="Survey List" />
-		<put-attribute name="body" value="/pages/listsurvey.jsp" />
-	</definition>
-
-	<definition name="SimpleAcknowledgement" extends="baseLayout">
-		<put-attribute name="title" value="Simple Acknowledgement" />
-		<put-attribute name="body" value="/pages/SimpleAcknowledgement.jsp" />
-	</definition>
-
-	<definition name="studentsurvey" extends="baseLayout">
-		<put-attribute name="title" value="Create Survey" />
-		<put-attribute name="body" value="/pages/studentsurvey.jsp" />
-	</definition>
-
-
 	<definition name="searchsurvey" extends="baseLayout">
 		<put-attribute name="title" value="Search Survey" />
 		<put-attribute name="body" value="/pages/searchsurvey.jsp" />
@@ -41,16 +25,6 @@
 	<definition name="filteredsurveys" extends="baseLayout">
 		<put-attribute name="title" value="Filtered Survey" />
 		<put-attribute name="body" value="/pages/filteredsurveys.jsp" />
-	</definition>
-
-	<definition name="welcome" extends="baseLayout">
-		<put-attribute name="title" value="Welcome" />
-		<put-attribute name="body" value="/pages/welcome.jsp" />
-	</definition>
-
-	<definition name="WinnerAcknowledgement" extends="baseLayout">
-		<put-attribute name="title" value="Winning Acknowledgement" />
-		<put-attribute name="body" value="/pages/WinnerAcknowledgement.jsp" />
 	</definition>
 
 	<definition name="error" extends="baseLayout">

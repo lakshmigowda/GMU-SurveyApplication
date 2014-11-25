@@ -60,9 +60,6 @@ This is list survey jsp file which shows list of surveys data.
 	<button onclick="location.href='/lakshmi_ws_client/searchsurvey'"
 		class="submit-button">Search again!</button>
 	<br>
-	<br>
-	<button onclick="location.href='/lakshmi_ws_client/welcome'"
-		class="submit-button">Back to homepage!</button>
 
 </body>
 </html>
