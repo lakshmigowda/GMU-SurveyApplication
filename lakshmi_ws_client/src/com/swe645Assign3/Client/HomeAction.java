@@ -17,7 +17,9 @@ import org.apache.struts2.ServletActionContext;
 
 import lakshmigowda.session.appmodel.SearchAppModel;
 import lakshmigowda.session.appmodel.StudentAppModel;
+import lakshmigowda.session.ejb.SurveyImplementation;
 import lakshmigowda.session.ejb.SurveyInterface;
+import lakshmigowda.session.ejb.SurveyService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -103,9 +105,12 @@ public class HomeAction extends ActionSupport {
 			}
 			Context ctx = new InitialContext();
 			// get ejb instance
-			SurveyInterface surveyInterface = (SurveyInterface) ctx
-					.lookup("SurveyImpl");
-			surveylist = surveyInterface.searchSurvey(search);
+			SurveyService surveyService = new SurveyService();
+			SurveyImplementation surveyImplementationPort = surveyService
+					.getSurveyImplementationPort();
+			List<lakshmigowda.session.ejb.StudentAppModel> serviceSurveyList = surveyImplementationPort
+					.searchSurvey(Utility.mapSearcToServiceSAM(search));
+			System.out.println(serviceSurveyList);
 		} catch (Exception e) {
 			return "error";
 		}

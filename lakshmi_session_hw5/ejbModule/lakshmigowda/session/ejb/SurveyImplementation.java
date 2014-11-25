@@ -10,6 +10,8 @@ import java.util.UUID;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
 
 import lakshmigowda.session.appmodel.SearchAppModel;
 import lakshmigowda.session.appmodel.StudentAppModel;
@@ -26,6 +28,7 @@ import lakshmigowda.session.utility.Utility;
  *         SurveyInterface interface
  */
 @Stateless(mappedName = "SurveyImpl")
+@WebService(serviceName = "SurveyService")
 public class SurveyImplementation implements SurveyInterface, Serializable {
 
 	private static final long serialVersionUID = 2357679544149954529L;
@@ -86,13 +89,20 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	 * This method searches the surveys by getting all the surveys from mysql
 	 * database and then filtering
 	 * 
-	 * @see lakshmi_session_hw5.SurveyInterface#searchSurvey(
-	 * lakshmi_session_hw5. Search)
+	 * @see
+	 * lakshmigowda.session.ejb.SurveyInterface#searchSurvey(lakshmigowda.session
+	 * .appmodel.SearchAppModel)
 	 */
 	@Override
+	@WebMethod(operationName = "searchSurvey")
 	public ArrayList<StudentAppModel> searchSurvey(SearchAppModel search)
 			throws ClassNotFoundException, SQLException, ParseException {
-		ArrayList<StudentAppModel> surveyList = getSurveylist();
+
+		List<Survey> surveylist = surveyHome.getAllSurveys();
+
+		ArrayList<StudentAppModel> surveyList = Utility
+				.mapSurveyListToStudentList(surveylist);
+
 		ArrayList<StudentAppModel> filteredList = new ArrayList<StudentAppModel>();
 		Iterator<StudentAppModel> iterator = surveyList.iterator();
 		while (iterator.hasNext()) {
