@@ -19,9 +19,8 @@ import lakshmigowda.session.ejb.SurveyService;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * This action class provides methods to handle the create survey, get survey
- * list, search surveys requests. It calls the Survey session EJB methods, which
- * provides the back end business logic implementation.
+ * This action class provides methods to handle the search surveys requests. It
+ * consumes the Search survey SOAP service.
  * 
  * @author Lakshmi
  *

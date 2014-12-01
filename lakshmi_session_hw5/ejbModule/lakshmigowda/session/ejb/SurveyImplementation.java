@@ -86,6 +86,7 @@ public class SurveyImplementation implements SurveyInterface, Serializable {
 	}
 
 	/*
+	 * This method is exposed as SOAP service now.
 	 * This method searches the surveys by getting all the surveys from mysql
 	 * database and then filtering
 	 * 
