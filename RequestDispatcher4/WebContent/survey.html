@@ -21,74 +21,54 @@
 					<h1>Welcome to CS Dept. Survey!!</h1>
 
 					<form id="surveyform" role="form" autocomplete="on">
+
 						<table class="table">
 							<tr>
-								<td colspan="2"><div id="error" style="color: red"></div></td>
-							</tr>
-							<tr>
-								<td>Full Name:</td>
-								<td><input type="text" id="name" class="form-control"
-									name="name" autofocus
+								<td width="33%">Full Name:<input type="text" id="name"
+									class="form-control" name="name" autofocus
 									placeholder="First name, Middle name, Last name"></td>
+								<td width="33%">Address: <input type="text" id="address"
+									class="form-control" name="address"></td>
+								<td width="33%">Phone:<input type="tel"
+									class="form-control" name="phone" placeholder="xxx-xxx-xxxx"></td>
+
 							</tr>
 							<tr>
-								<td>Address:</td>
-								<td><input type="text" id="address" class="form-control"
-									name="address"></td>
-							</tr>
-							<tr>
-								<td>Zip:</td>
-								<td><input type="text" id="zip" class="form-control"
+								<td>City:<input type="text" id="city" class="form-control"
+									name="zip"></td>
+								<td>State:<input type="text" id="state"
+									class="form-control" name="zip"></td>
+								<td>Zip: <input type="text" id="zip" class="form-control"
 									name="zip"></td>
 							</tr>
 							<tr>
-								<td>City:</td>
-								<td><input type="text" id="city" class="form-control"
-									name="zip"></td>
+								<td>E-mail:<input type="text" id="email"
+									class="form-control" name="userEmail"
+									placeholder="xxx@xxxx.com"></td>
+								<td>URL:<input type="url" class="form-control"
+									name="userUrl" placeholder="Eg. www.google.com"></td>
+								<td>Data:<input type="text" class="form-control"
+									name="data" id="data"
+									placeholder="Enter 10 comma separated numbers from 1 through 100"></td>
 							</tr>
 							<tr>
-								<td>State:</td>
-								<td><input type="text" id="state" class="form-control"
-									name="zip"></td>
-							</tr>
-							<tr>
-								<td>Phone:</td>
-								<td><input type="tel" class="form-control" name="phone"
-									placeholder="xxx-xxx-xxxx"></td>
-							</tr>
-							<tr>
-								<td>E-mail:</td>
-								<td><input type="text" id="email" class="form-control"
-									name="userEmail" placeholder="xxx@xxxx.com"></td>
-							</tr>
-							<tr>
-								<td>URL:</td>
-								<td><input type="url" class="form-control" name="userUrl"
-									placeholder="Eg. www.google.com"></td>
-							</tr>
-							<tr>
-								<td>Date:</td>
-								<td><input type="date" class="form-control"
+								<td>Date:<input type="date" class="form-control"
 									name="dateOfSurvey"></td>
-							</tr>
-							<tr>
-								<td>What you liked the most about the campus?</td>
-								<td><label class="checkbox-inline"><input
-										type="checkbox" name="campusLiking" value="students">Students</label>
-									<label class="checkbox-inline"><input type="checkbox"
+								<td>What you liked the most about the campus?<br> <label
+									class="checkbox-inline"><input type="checkbox"
+										name="campusLiking" value="students">Students</label> <label
+									class="checkbox-inline"><input type="checkbox"
 										name="campusLiking" value="atmosphere">Atmosphere</label> <label
 									class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="location">Location</label> <label
-									class="checkbox-inline"><input type="checkbox"
+										name="campusLiking" value="location">Location</label> <br>
+									<label class="checkbox-inline"><input type="checkbox"
 										name="campusLiking" value="campus">Campus</label> <label
 									class="checkbox-inline"><input type="checkbox"
 										name="campusLiking" value="dorms">Dorm rooms </label> <label
 									class="checkbox-inline"><input type="checkbox"
 										name="campusLiking" value="sports">Sports</label></td>
-							</tr>
-							<tr>
-								<td>How did you became interested in the university?</td>
-								<td><label class="radio-inline"><input type="radio"
+								<td>How did you became interested in the university?<label
+									class="radio-inline"><input type="radio"
 										name="interstedUniv" value="friends">Friends</label> <label
 									class="radio-inline"><input type="radio"
 										name="interstedUniv" value="television">Television</label> <label
@@ -99,8 +79,8 @@
 							</tr>
 							<tr>
 								<td>Choose your graduation month and enter year in the text
-									box.</td>
-								<td><input list="months"> <datalist id="months">
+									box.<input list="months" class="form-control"> <datalist
+										id="months">
 										<option value="January">
 										<option value="February">
 										<option value="March">
@@ -113,32 +93,25 @@
 										<option value="October">
 										<option value="November">
 										<option value="December">
-									</datalist> Year:<input type="text" name="year"></td>
-							</tr>
-							<tr>
+									</datalist><br> Year:<input type="text" class="form-control"
+									name="year">
+								</td>
 								<td>Likelihood of you recommending this school for other
-									students:</td>
-								<td><select class="form-control" style="width: 200px">
+									students:<select class="form-control" style="width: 200px">
 										<option value="veryLikely">Very Likely</option>
 										<option value="likely">Likely</option>
 										<option value="unlikely">Unlikely</option>
-								</select></td>
-							</tr>
-							<tr>
-								<td>Enter your comments here:</td>
-								<td><textarea class="form-control" rows="4" cols="50"></textarea></td>
-							</tr>
-							<tr>
-								<td>Data:</td>
-								<td><input type="text" class="form-control" name="data"
-									id="data"
-									placeholder="Enter 10 comma separated numbers from 1 through 100"></td>
+								</select>
+								</td>
+								<td>Enter your comments here:<textarea class="form-control"
+										rows="4" cols="50"></textarea></td>
 							</tr>
 							<tr>
 								<td></td>
-								<td><input type="submit" id="submitButton"
+								<td align="center"><input type="submit" id="submitButton"
 									class="btn btn-default" value="Submit"> <input
 									type="reset" class="btn btn-default" value="Reset"></td>
+								<td></td>
 							</tr>
 						</table>
 					</form>
