@@ -29,29 +29,6 @@ function wrongPerson() {
 	return false;
 }
 
-function valueChanged() {
-	var values = document.getElementById("data").value;
-	var average = 0;
-	var maximum = 0;
-	var tags = values.split(",");
-
-	if (tags.length > 10)
-		alert('There are more than 10 numbers');
-	else if (tags.length < 10) {
-		alert('Please enter ten numbers in the "Data" field');
-	} else {
-		var sum = 0;
-		for (var i = 0; i < tags.length; i++) {
-			sum += parseInt(tags[i]);
-		}
-		average = sum / tags.length;
-		maximum = Math.max.apply(null, tags);
-
-		document.getElementById("avg").value = average;
-		document.getElementById("maximum").value = maximum;
-	}
-}
-
 function nameValidate() {
 	var value = $("#name").val();
 	if (!textValidate(value)) {
@@ -134,7 +111,7 @@ function radioButtonValidate() {
 	}
 }
 
-$("#studentform").submit(function(event) {
+$("#surveyform").submit(function(event) {
 	event.preventDefault();
 	$("#error").html("");
 	nameValidate();
@@ -142,9 +119,9 @@ $("#studentform").submit(function(event) {
 	emailValidate();
 	checkBoxValidate();
 	radioButtonValidate();
-	if($("#error").is(':empty')){
-	alert("form submitted successfully");
-	location.reload(true);
+	if ($("#error").is(':empty')) {
+		alert("form submitted successfully");
+		location.reload(true);
 	}
 });
 

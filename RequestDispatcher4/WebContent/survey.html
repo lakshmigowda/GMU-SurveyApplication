@@ -5,23 +5,9 @@
 <title>CS Dept. Survey</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css"
-	href="/RequestDispatcher4/resources/css/bootstrap.min.css.css" />
-<style>
-h1, h2 {
-	text-shadow: 5px 5px 10px black;
-}
-
-body {
-	background: -webkit-linear-gradient(left top, grey, pink);
-	/* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, grey, pink);
-	/* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, grey, pink);
-	/* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, grey, pink);
-	/* Standard syntax (must be last) */
-}
-</style>
+	href="/RequestDispatcher4/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/RequestDispatcher4/resources/css/custom.css" />
 </head>
 
 <body>
@@ -33,45 +19,47 @@ body {
 			<td>
 				<div class="container">
 					<h1>Welcome to CS Dept. Survey!!</h1>
-					<table class="table">
 
-						<form id="studentform" role="form" autocomplete="on">
+					<form id="surveyform" role="form" autocomplete="on">
+						<table class="table">
 							<tr>
 								<td colspan="2"><div id="error" style="color: red"></div></td>
 							</tr>
 							<tr>
 								<td>Full Name:</td>
 								<td><input type="text" id="name" class="form-control"
-									name="name" require autofocus
+									name="name" autofocus
 									placeholder="First name, Middle name, Last name"></td>
 							</tr>
 							<tr>
 								<td>Address:</td>
 								<td><input type="text" id="address" class="form-control"
-									name="address" require></td>
+									name="address"></td>
 							</tr>
 							<tr>
 								<td>Zip:</td>
 								<td><input type="text" id="zip" class="form-control"
-									name="zip" require></td>
+									name="zip"></td>
 							</tr>
 							<tr>
 								<td>City:</td>
-								<td><div id="city" name="city" require></td>
+								<td><input type="text" id="city" class="form-control"
+									name="zip"></td>
 							</tr>
 							<tr>
 								<td>State:</td>
-								<td><div id="state" name="state" require></td>
+								<td><input type="text" id="state" class="form-control"
+									name="zip"></td>
 							</tr>
 							<tr>
 								<td>Phone:</td>
 								<td><input type="tel" class="form-control" name="phone"
-									require placeholder="xxx-xxx-xxxx"></td>
+									placeholder="xxx-xxx-xxxx"></td>
 							</tr>
 							<tr>
 								<td>E-mail:</td>
 								<td><input type="text" id="email" class="form-control"
-									name="userEmail" require placeholder="xxx@xxxx.com"></td>
+									name="userEmail" placeholder="xxx@xxxx.com"></td>
 							</tr>
 							<tr>
 								<td>URL:</td>
@@ -81,7 +69,7 @@ body {
 							<tr>
 								<td>Date:</td>
 								<td><input type="date" class="form-control"
-									name="dateOfSurvey" require></td>
+									name="dateOfSurvey"></td>
 							</tr>
 							<tr>
 								<td>What you liked the most about the campus?</td>
@@ -143,18 +131,8 @@ body {
 							<tr>
 								<td>Data:</td>
 								<td><input type="text" class="form-control" name="data"
-									id="data" onchange="valueChanged()"
+									id="data"
 									placeholder="Enter 10 comma separated numbers from 1 through 100"></td>
-							</tr>
-							<tr>
-								<td>Average:</td>
-								<td><input type="text" disabled="disabled" name="avg"
-									class="form-control" id="avg"></td>
-							</tr>
-							<tr>
-								<td>Maximum:</td>
-								<td><input type="text" disabled="disabled" name="maximum"
-									id="maximum" class="form-control"></td>
 							</tr>
 							<tr>
 								<td></td>
@@ -162,9 +140,8 @@ body {
 									class="btn btn-default" value="Submit"> <input
 									type="reset" class="btn btn-default" value="Reset"></td>
 							</tr>
-						</form>
-
-					</table>
+						</table>
+					</form>
 				</div>
 			</td>
 		</tr>
