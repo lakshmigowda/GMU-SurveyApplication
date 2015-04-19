@@ -4,26 +4,15 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>Simple</servlet-name>
-		<servlet-class>Simple</servlet-class>
-	</servlet>
-	<servlet>
-		<description>This is the description of my J2EE component</description>
-		<display-name>This is the display name of my J2EE component</display-name>
-		<servlet-name>WelcomeServlet</servlet-name>
-		<servlet-class>WelcomeServlet</servlet-class>
+		<servlet-name>SurveyServlet</servlet-name>
+		<servlet-class>SurveyServlet</servlet-class>
 	</servlet>
 
-
 	<servlet-mapping>
-		<servlet-name>Simple</servlet-name>
-		<url-pattern>/go</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>WelcomeServlet</servlet-name>
-		<url-pattern>/welcome</url-pattern>
+		<servlet-name>SurveyServlet</servlet-name>
+		<url-pattern>/submitsurvey</url-pattern>
+		<url-pattern>/createsurvey</url-pattern>
+		<url-pattern>/displaysurvey</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>survey.html</welcome-file>

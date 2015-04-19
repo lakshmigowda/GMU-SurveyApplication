@@ -20,7 +20,8 @@
 				<div class="container">
 					<h1>Welcome to CS Dept. Survey!!</h1>
 
-					<form id="surveyform" role="form" autocomplete="on">
+					<form id="surveyform" action="submitsurvey" role="form"
+						autocomplete="on" method="post">
 
 						<table class="table">
 							<tr>
@@ -35,47 +36,46 @@
 							</tr>
 							<tr>
 								<td>City:<input type="text" id="city" class="form-control"
-									name="zip"></td>
+									name="city"></td>
 								<td>State:<input type="text" id="state"
-									class="form-control" name="zip"></td>
+									class="form-control" name="state"></td>
 								<td>Zip: <input type="text" id="zip" class="form-control"
 									name="zip"></td>
 							</tr>
 							<tr>
 								<td>E-mail:<input type="text" id="email"
-									class="form-control" name="userEmail"
-									placeholder="xxx@xxxx.com"></td>
-								<td>URL:<input type="url" class="form-control"
-									name="userUrl" placeholder="Eg. www.google.com"></td>
+									class="form-control" name="email" placeholder="xxx@xxxx.com"></td>
+								<td>URL:<input type="url" class="form-control" name="url"
+									placeholder="Eg. www.google.com"></td>
 								<td>Data:<input type="text" class="form-control"
 									name="data" id="data"
 									placeholder="Enter 10 comma separated numbers from 1 through 100"></td>
 							</tr>
 							<tr>
 								<td>Date:<input type="date" class="form-control"
-									name="dateOfSurvey"></td>
+									name="date" id="date"></td>
 								<td>What you liked the most about the campus?<br> <label
 									class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="students">Students</label> <label
+										name="campusliking" value="students">Students</label> <label
 									class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="atmosphere">Atmosphere</label> <label
+										name="campusliking" value="atmosphere">Atmosphere</label> <label
 									class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="location">Location</label> <br>
+										name="campusliking" value="location">Location</label> <br>
 									<label class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="campus">Campus</label> <label
+										name="campusliking" value="campus">Campus</label> <label
 									class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="dorms">Dorm rooms </label> <label
+										name="campusliking" value="dorms">Dorm rooms </label> <label
 									class="checkbox-inline"><input type="checkbox"
-										name="campusLiking" value="sports">Sports</label></td>
+										name="campusliking" value="sports">Sports</label></td>
 								<td>How did you became interested in the university?<label
 									class="radio-inline"><input type="radio"
-										name="interstedUniv" value="friends">Friends</label> <label
+										name="intersteduniv" value="friends">Friends</label> <label
 									class="radio-inline"><input type="radio"
-										name="interstedUniv" value="television">Television</label> <label
+										name="intersteduniv" value="television">Television</label> <label
 									class="radio-inline"><input type="radio"
-										name="interstedUniv" value="internet">Internet</label> <label
+										name="intersteduniv" value="internet">Internet</label> <label
 									class="radio-inline"><input type="radio"
-										name="interstedUniv" value="other">Other</label></td>
+										name="intersteduniv" value="other">Other</label></td>
 							</tr>
 							<tr>
 								<td>Choose your graduation month and enter year in the text
@@ -97,7 +97,8 @@
 									name="year">
 								</td>
 								<td>Likelihood of you recommending this school for other
-									students:<select class="form-control" style="width: 200px">
+									students:<select class="form-control" style="width: 200px"
+									name="likelyrecommend">
 										<option value="veryLikely">Very Likely</option>
 										<option value="likely">Likely</option>
 										<option value="unlikely">Unlikely</option>
