@@ -10,9 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Beans.DataBean;
 import Beans.StudentBean;
 import BusinessDeligate.BusinessDeligate;
 import DAO.StudentDAO;
+import DataProcessing.DataProcessor;
 
 public class SurveyServlet extends HttpServlet {
 
@@ -51,6 +53,25 @@ public class SurveyServlet extends HttpServlet {
 				StudentBean student = BusinessDeligate.readStudent(request);
 				try {
 					StudentDAO.storeSurvey(student);
+					double sd = DataProcessor
+							.calculateStandardDeviation(student.getData());
+					double mean = DataProcessor
+							.calculateMean(student.getData());
+					DataBean databean = new DataBean();
+					databean.setMean(mean);
+					databean.setSd(sd);
+					if (mean > 90) {
+						RequestDispatcher rd = request
+								.getRequestDispatcher("winneracknowledgement.jsp");
+						request.setAttribute("databean", databean);
+						rd.include(request, response);
+					} else {
+						RequestDispatcher rd = request
+								.getRequestDispatcher("simpleacknowledgement.jsp");
+						request.setAttribute("databean", databean);
+						rd.include(request, response);
+					}
+
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				} catch (SQLException e) {

@@ -1,7 +1,7 @@
 package DataProcessing;
 
 public class DataProcessor {
-	public static double calculateAverage(String array) {
+	public static double calculateMean(String array) {
 
 		String[] numbers = array.split(",");
 		double average = 0;
@@ -19,7 +19,7 @@ public class DataProcessor {
 
 		String[] stringNumbers = array.split(",");
 		double sd = 0;
-		double average = calculateAverage(array);
+		double average = calculateMean(array);
 
 		if (stringNumbers.length > 0) {
 			double[] numbers = new double[stringNumbers.length];
