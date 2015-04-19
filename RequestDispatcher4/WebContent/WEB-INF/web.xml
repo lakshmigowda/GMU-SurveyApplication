@@ -5,7 +5,7 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<servlet>
 		<servlet-name>SurveyServlet</servlet-name>
-		<servlet-class>SurveyServlet</servlet-class>
+		<servlet-class>Servlet.SurveyServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

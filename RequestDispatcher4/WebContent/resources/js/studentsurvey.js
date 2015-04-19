@@ -63,12 +63,12 @@ function addressValidate() {
 		$("#zip").val("");
 	}
 
-	if (!textValidate($("#city").text())) {
+	if (!textValidate($("#city").val())) {
 		$("#error").append("<p>City should only contain alphabets!</p>");
 		$("#city").text("");
 	}
 
-	if (!textValidate($("#state").text())) {
+	if (!textValidate($("#state").val())) {
 		$("#error").append("<p>State should only contain alphabets!</p>");
 		$("#state").text("");
 	}
@@ -86,7 +86,7 @@ function emailValidate() {
 
 function checkBoxValidate() {
 	var count = 0;
-	$('input[type=checkbox][name=campusLiking]').each(function() {
+	$('input[type=checkbox][name=campusliking]').each(function() {
 		if (this.checked) {
 			count++;
 		}
@@ -101,7 +101,7 @@ function checkBoxValidate() {
 function radioButtonValidate() {
 
 	var bool = false;
-	$('input[type=radio][name=interstedUniv]').each(function() {
+	$('input[type=radio][name=intersteduniv]').each(function() {
 		if (this.checked) {
 			bool = true;
 		}
@@ -115,19 +115,18 @@ $("#surveyform").submit(function(event) {
 	event.preventDefault();
 	$("#error").html("");
 	nameValidate();
-	addressValidate();
-	emailValidate();
-	checkBoxValidate();
-	radioButtonValidate();
+	//addressValidate();
+	//emailValidate();
+	//checkBoxValidate();
+	//radioButtonValidate();
 	if ($("#error").is(':empty')) {
-		alert("form submitted successfully");
-		location.reload(true);
+		this.submit();
 	}
 });
 
 var xhr = new XMLHttpRequest();
 
-$("#zip")
+/*$("#zip")
 		.change(
 				function() {
 
@@ -173,4 +172,4 @@ function zipSuccess() {
 	}
 }
 
-$(".imgdiv").tooltip();
+$(".imgdiv").tooltip();*/

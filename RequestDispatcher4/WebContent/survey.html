@@ -1,3 +1,4 @@
+
 <!--Lakshmi Venkataiah-->
 <!DOCTYPE html>
 <html>
@@ -25,14 +26,17 @@
 
 						<table class="table">
 							<tr>
+								<td colspan="3"><div id="error" style="color: red"></div></td>
+							</tr>
+							<tr>
+								<td width="33%">Student ID:<input type="text" id="id"
+									class="form-control" name="id" autofocus
+									placeholder="Student ID"></td>
 								<td width="33%">Full Name:<input type="text" id="name"
 									class="form-control" name="name" autofocus
 									placeholder="First name, Middle name, Last name"></td>
 								<td width="33%">Address: <input type="text" id="address"
 									class="form-control" name="address"></td>
-								<td width="33%">Phone:<input type="tel"
-									class="form-control" name="phone" placeholder="xxx-xxx-xxxx"></td>
-
 							</tr>
 							<tr>
 								<td>City:<input type="text" id="city" class="form-control"
@@ -52,8 +56,8 @@
 									placeholder="Enter 10 comma separated numbers from 1 through 100"></td>
 							</tr>
 							<tr>
-								<td>Date:<input type="date" class="form-control"
-									name="date" id="date"></td>
+								<td>Phone:<input type="tel" class="form-control"
+									name="phone" placeholder="xxx-xxx-xxxx"></td>
 								<td>What you liked the most about the campus?<br> <label
 									class="checkbox-inline"><input type="checkbox"
 										name="campusliking" value="students">Students</label> <label
@@ -79,8 +83,8 @@
 							</tr>
 							<tr>
 								<td>Choose your graduation month and enter year in the text
-									box.<input list="months" class="form-control"> <datalist
-										id="months">
+									box.<input list="months" name="month" class="form-control">
+									<datalist id="months">
 										<option value="January">
 										<option value="February">
 										<option value="March">
@@ -105,14 +109,15 @@
 								</select>
 								</td>
 								<td>Enter your comments here:<textarea class="form-control"
-										rows="4" cols="50"></textarea></td>
+										rows="4" cols="50" name="comments"></textarea></td>
 							</tr>
 							<tr>
+								<td>Date:<input type="date" class="form-control"
+									name="date" id="date"></td>
 								<td></td>
 								<td align="center"><input type="submit" id="submitButton"
 									class="btn btn-default" value="Submit"> <input
 									type="reset" class="btn btn-default" value="Reset"></td>
-								<td></td>
 							</tr>
 						</table>
 					</form>
