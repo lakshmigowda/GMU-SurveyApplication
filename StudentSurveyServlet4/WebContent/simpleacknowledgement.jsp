@@ -4,7 +4,7 @@ This is simple acknowledgement page which displays name, mean and sd
  -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,16 +24,16 @@ This is simple acknowledgement page which displays name, mean and sd
 		<p>Mean: ${databean.mean}</p>
 		<p>Standard Deviation: ${databean.sd}</p>
 		<p>
-			<a href="/lakshmi_ws_client/welcome">Back to Welcome Page</a>
-		</p>
-		<p>
-			<a href="/lakshmi_ws_client/createsurvey">Back to Create Survey
-				Page</a>
+			<a href="/StudentSurveyServlet4/createsurvey">Back to Create
+				Survey Page</a>
 		</p>
 
 		<h4>Current Surveys</h4>
 		<c:forEach var="survey" items="${surveys}">
-			<c:out value="${survey.id}" />
+			<a href="/StudentSurveyServlet4/${survey.id}"> <c:out
+					value="${survey.id}" />
+			</a>
+			<br>
 		</c:forEach>
 	</div>
 </body>
