@@ -30,8 +30,8 @@ This is simple acknowledgement page which displays name, mean and sd
 
 		<h4>Current Surveys</h4>
 		<c:forEach var="survey" items="${surveys}">
-			<a href="/StudentSurveyServlet4/${survey.id}"> <c:out
-					value="${survey.id}" />
+			<a href="/StudentSurveyServlet4/displaysurvey?student=${survey.id}">
+				<c:out value="${survey.id}" />
 			</a>
 			<br>
 		</c:forEach>

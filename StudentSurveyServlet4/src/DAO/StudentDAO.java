@@ -121,26 +121,30 @@ public class StudentDAO {
 				newStudent.setData(rs.getString("data"));
 
 				String dateString = rs.getString("date");
-				DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-				Date date = (Date) formatter.parse(dateString);
-				newStudent.setDate(date);
-
+				DateFormat formatter = new SimpleDateFormat(
+						"E MMM dd HH:mm:ss Z yyyy");
+				if (!dateString.equals("null") && !dateString.isEmpty()) {
+					Date date = (Date) formatter.parse(dateString);
+					newStudent.setDate(date);
+				}
 				String campusliking = rs.getString("campusliking");
-				String trimed = (String) campusliking.subSequence(1,
-						campusliking.length() - 1);
-				List<String> newLikingList = Arrays.asList(trimed
-						.split("\\s*,\\s*"));
-				ArrayList<String> likingArrayList = new ArrayList<String>();
-				Iterator<String> iterator = newLikingList.iterator();
-				while (iterator.hasNext()) {
-					likingArrayList.add(iterator.next());
+				if (!dateString.equals("null") && !dateString.isEmpty()) {
+					String trimed = (String) campusliking.subSequence(1,
+							campusliking.length() - 1);
+					List<String> newLikingList = Arrays.asList(trimed
+							.split("\\s*,\\s*"));
+					ArrayList<String> likingArrayList = new ArrayList<String>();
+					Iterator<String> iterator = newLikingList.iterator();
+					while (iterator.hasNext()) {
+						likingArrayList.add(iterator.next());
+					}
+					newStudent.setCampusliking(likingArrayList);
 				}
 				newStudent.setIntersteduniv(rs.getString("intersteduniv"));
 				newStudent.setMonth(rs.getString("Month"));
 				newStudent.setYear(rs.getString("year"));
 				newStudent.setLikelyrecommend(rs.getString("likelyrecommend"));
 				newStudent.setComments(rs.getString("comments"));
-
 				surveylist.add(newStudent);
 			}
 			rs.close();

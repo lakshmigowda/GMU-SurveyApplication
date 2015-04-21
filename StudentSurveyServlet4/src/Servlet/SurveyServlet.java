@@ -28,18 +28,25 @@ public class SurveyServlet extends HttpServlet {
 
 		if ("/".equalsIgnoreCase(servletPath)) {
 			System.out.println("create");
-			RequestDispatcher rd = request.getRequestDispatcher("survey.html");
+			RequestDispatcher rd = request
+					.getRequestDispatcher("createsurvey.jsp");
 			rd.include(request, response);
 		}
 		if ("/createsurvey".equalsIgnoreCase(servletPath)) {
 			System.out.println("create");
-			RequestDispatcher rd = request.getRequestDispatcher("survey.html");
+			RequestDispatcher rd = request
+					.getRequestDispatcher("createsurvey.jsp");
 			rd.include(request, response);
 		}
-		if ("/submitsurvey".equalsIgnoreCase(servletPath)) {
-			System.out.println("submit");
-		}
 		if ("/displaysurvey".equalsIgnoreCase(servletPath)) {
+			String student = request.getParameter("student");
+			StudentBean studentBean;
+			try {
+				studentBean = StudentDAO.getSurvey(student);
+			} catch (ClassNotFoundException | SQLException | ParseException e) {
+				e.printStackTrace();
+			}
+			request.getRequestDispatcher("displaysurvey.jsp");
 			System.out.println("display");
 		}
 	}
