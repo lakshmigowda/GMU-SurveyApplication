@@ -41,8 +41,11 @@ public class SurveyServlet extends HttpServlet {
 			StudentBean studentBean = null;
 			try {
 				studentBean = StudentDAO.getSurvey(student);
-			} catch (ClassNotFoundException | SQLException | ParseException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				RequestDispatcher rd = request
+						.getRequestDispatcher("NoSuchStudent.jsp");
+				rd.include(request, response);
+				return;
 			}
 			RequestDispatcher rd = request
 					.getRequestDispatcher("displaysurvey.jsp");
