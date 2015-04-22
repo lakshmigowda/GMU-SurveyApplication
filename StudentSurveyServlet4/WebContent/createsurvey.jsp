@@ -1,6 +1,10 @@
-
 <!--Lakshmi Venkataiah-->
+
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <html>
 <head>
 <title>CS Dept. Survey</title>
@@ -140,7 +144,7 @@
 	<script src="/StudentSurveyServlet4/resources/js/jquery.js"
 		type="text/javascript"></script>
 	<script type="text/javascript"
-		src="/StudentSurveyServlet4/resources/js/studentsurvey.js"></script>
+		src="/StudentSurveyServlet4/resources/js/createsurvey.js"></script>
 </body>
 
 </html>

@@ -17,19 +17,24 @@ This is winning acknowledgement page which displays winning message, name, mean 
 </head>
 <body class="body">
 	<div class="form-container">
-		<h1 class="label">Congratulations! You have won 2 movie tickets!</h1>
-		<h1 class="label">Thanks for submitting the survey!</h1>
-		<p class="label">Survey Results</p>
+		<h1>Congratulations! You have won 2 movie tickets!</h1>
+		<h1>Thanks for submitting the survey!</h1>
+		<p>Survey Results</p>
 		<p>Name: ${name}</p>
 		<p>Mean: ${databean.mean}</p>
 		<p>Standard Deviation: ${databean.sd}</p>
 		<p>
-			<a href="/lakshmi_ws_client/welcome">Back to Welcome Page</a>
+			<a href="/StudentSurveyServlet4/createsurvey">Back to Create
+				Survey Page</a>
 		</p>
-		<p>
-			<a href="/lakshmi_ws_client/createsurvey">Back to Create Survey
-				Page</a>
-		</p>
+
+		<h4>Current Surveys</h4>
+		<c:forEach var="survey" items="${surveys}">
+			<a href="/StudentSurveyServlet4/displaysurvey?student=${survey.id}">
+				<c:out value="${survey.id}" />
+			</a>
+			<br>
+		</c:forEach>
 	</div>
 </body>
 </html>
