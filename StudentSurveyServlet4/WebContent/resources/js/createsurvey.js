@@ -115,12 +115,14 @@ $("#surveyform").submit(function(event) {
 	event.preventDefault();
 	$("#error").html("");
 	nameValidate();
-	//addressValidate();
-	//emailValidate();
-	//checkBoxValidate();
-	//radioButtonValidate();
+	addressValidate();
+	emailValidate();
+	checkBoxValidate();
+	radioButtonValidate();
 	if ($("#error").is(':empty')) {
 		this.submit();
+	} else {
+		$("#error").dialog();
 	}
 });
 

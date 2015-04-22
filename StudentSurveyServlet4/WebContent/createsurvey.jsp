@@ -12,6 +12,8 @@
 <link rel="stylesheet" type="text/css"
 	href="/StudentSurveyServlet4/resources/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css"
+	href="/StudentSurveyServlet4/resources/css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css"
 	href="/StudentSurveyServlet4/resources/css/custom.css" />
 </head>
 
@@ -142,6 +144,8 @@
 	</table>
 
 	<script src="/StudentSurveyServlet4/resources/js/jquery.js"
+		type="text/javascript"></script>
+	<script src="/StudentSurveyServlet4/resources/js/jquery-ui.min.js"
 		type="text/javascript"></script>
 	<script type="text/javascript"
 		src="/StudentSurveyServlet4/resources/js/createsurvey.js"></script>
