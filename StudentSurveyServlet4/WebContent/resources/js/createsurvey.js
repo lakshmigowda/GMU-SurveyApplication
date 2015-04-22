@@ -128,7 +128,7 @@ $("#surveyform").submit(function(event) {
 
 var xhr = new XMLHttpRequest();
 
-/*$("#zip")
+$("#zip")
 		.change(
 				function() {
 
@@ -158,8 +158,8 @@ function zipSuccess() {
 		for (var i = 0; i < length; i++) {
 			var zipcode = data.zipcodes[i];
 			if (zip == zipcode.zip) {
-				$("#city").html(zipcode.city);
-				$("#state").html(zipcode.state);
+				$("#city").val(zipcode.city);
+				$("#state").val(zipcode.state);
 				exists = true;
 				$("#error").html("");
 			}
@@ -167,11 +167,11 @@ function zipSuccess() {
 
 		if (!exists) {
 			$("#error").html("");
-			$("#city").html("");
-			$("#state").html("");
+			$("#city").val("");
+			$("#state").val("");
 			$("#error").append("<p>Zip code is invalid!</p>");
 		}
 	}
 }
 
-$(".imgdiv").tooltip();*/
+$(".imgdiv").tooltip();
