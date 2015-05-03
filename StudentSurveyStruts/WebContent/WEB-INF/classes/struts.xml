@@ -16,6 +16,7 @@
 
 		<action name="displaysurvey" class="Controller.SurveyController"
 			method="displaysurvey">
+			<param name="id"></param>
 			<result name="displaysurvey" type="tiles">displaysurvey
 			</result>
 			<result name="error" type="tiles">error</result>
