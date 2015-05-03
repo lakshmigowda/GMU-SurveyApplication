@@ -12,10 +12,11 @@
 <meta name="student.viewport"
 	content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css"
-	href="/resources/css/bootstrap.min.css" />
+	href="/StudentSurveyStruts/resources/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="/resources/css/jquery-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/resources/css/custom.css" />
+	href="/StudentSurveyStruts/resources/css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/StudentSurveyStruts/resources/css/custom.css" />
 </head>
 
 <body>
@@ -111,9 +112,12 @@
 		</tr>
 	</table>
 
-	<script src="/resources/js/jquery.js" type="text/javascript"></script>
-	<script src="/resources/js/jquery-ui.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="/resources/js/createsurvey.js"></script>
+	<script src="/StudentSurveyStruts/resources/js/jquery.js"
+		type="text/javascript"></script>
+	<script src="/StudentSurveyStruts/resources/js/jquery-ui.min.js"
+		type="text/javascript"></script>
+	<script type="text/javascript"
+		src="/StudentSurveyStruts/resources/js/createsurvey.js"></script>
 </body>
 
 </html>

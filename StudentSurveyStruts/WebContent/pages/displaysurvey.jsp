@@ -11,8 +11,9 @@
 <title>CS Dept. Survey</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css"
-	href="/resources/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/resources/css/custom.css" />
+	href="/StudentSurveyStruts/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/StudentSurveyStruts/resources/css/custom.css" />
 </head>
 
 <body>
@@ -84,8 +85,10 @@
 		</tr>
 	</table>
 
-	<script src="/resources/js/jquery.js" type="text/javascript"></script>
-	<script type="text/javascript" src="/resources/js/displaysurvey.js"></script>
+	<script src="/StudentSurveyStruts/resources/js/jquery.js"
+		type="text/javascript"></script>
+	<script type="text/javascript"
+		src="/StudentSurveyStruts/resources/js/displaysurvey.js"></script>
 </body>
 
 </html>
