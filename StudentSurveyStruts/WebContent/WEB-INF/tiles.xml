@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Lakshmi Venkataiah -->
+<!-- This is tiles configuration of the tiles -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+   "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+   "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/pages/baseLayout.jsp">
+		<put-attribute name="title" value="Template" />
+		<put-attribute name="header" value="/pages/header.jsp" />
+		<put-attribute name="body" value="/pages/body.jsp" />
+		<put-attribute name="footer" value="/pages/footer.jsp" />
+	</definition>
+
+	<definition name="createsurvey" extends="baseLayout">
+		<put-attribute name="title" value="Create Survey" />
+		<put-attribute name="body" value="/pages/createsurvey.jsp" />
+	</definition>
+
+	<definition name="displaysurvey" extends="baseLayout">
+		<put-attribute name="title" value="Display Survey" />
+		<put-attribute name="body" value="/pages/displaysurvey.jsp" />
+	</definition>
+
+	<definition name="winneracknowledgement" extends="baseLayout">
+		<put-attribute name="title" value="winneracknowledgement" />
+		<put-attribute name="body" value="/pages/winneracknowledgement.jsp" />
+	</definition>
+
+	<definition name="simpleacknowledgement" extends="baseLayout">
+		<put-attribute name="title" value="simpleacknowledgement" />
+		<put-attribute name="body" value="/pages/simpleacknowledgement.jsp" />
+	</definition>
+
+	<definition name="error" extends="baseLayout">
+		<put-attribute name="title" value="ERROR: Something went wrong" />
+		<put-attribute name="body" value="/pages/error.jsp" />
+	</definition>
+
+</tiles-definitions>
