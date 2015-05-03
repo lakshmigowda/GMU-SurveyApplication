@@ -39,8 +39,8 @@
 
 		<h4>Current Surveys</h4>
 		<c:forEach var="survey" items="${surveys}">
-			<a href="/StudentSurveyStruts/displaysurvey?student=${survey.id}">
-				<c:out value="${survey.id}" />
+			<a href="/StudentSurveyStruts/displaysurvey?id=${survey.id}"> <c:out
+					value="${survey.id}" />
 			</a>
 			<br>
 		</c:forEach>

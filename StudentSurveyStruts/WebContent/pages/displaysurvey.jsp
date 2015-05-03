@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CS Dept. Survey</title>
+<title>CS Dept. student</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css"
 	href="/StudentSurveyStruts/resources/css/bootstrap.min.css" />
@@ -24,49 +24,69 @@
 		<tr>
 			<td>
 				<div class="container">
-					<h1>Welcome to CS Dept. Survey!!</h1>
+					<h1>Welcome to CS Dept. student!!</h1>
 
 					<table class="table">
 						<tr>
 							<td colspan="3"><div id="error" style="color: red"></div></td>
 						</tr>
 						<tr>
-							<td width="33%">Student ID:<s:property value="survey.id" /></td>
-							<td width="33%">Full Name:<s:property value="survey.name" /></td>
-							<td width="33%">Address: <s:property value="survey.address" /></td>
+							<td width="33%">Student ID: <span class="form-control">
+									<s:property value="student.id" />
+							</span>
+							</td>
+							<td width="33%">Full Name:<span class="form-control">
+									<s:property value="student.name" />
+							</span></td>
+							<td width="33%">Address: <span class="form-control">
+									<s:property value="student.address" />
+							</span></td>
 						</tr>
 						<tr>
-							<td>City:<s:property value="survey.city" /></td>
-							<td>State:<s:property value="survey.state" /></td>
-							<td>Zip: <s:property value="survey.zip" /></td>
+							<td>City:<span class="form-control"> <s:property
+										value="student.city" /></span></td>
+							<td>State:<span class="form-control"> <s:property
+										value="student.state" /></span></td>
+							<td>Zip: <span class="form-control"> <s:property
+										value="student.zip" /></span></td>
 						</tr>
 						<tr>
-							<td>E-mail:<s:property value="survey.email" /></td>
-							<td>URL:<s:property value="survey.url" /></td>
-							<td>Data:<s:property value="survey.data" /></td>
+							<td>E-mail:<span class="form-control"> <s:property
+										value="student.email" /></span></td>
+							<td>URL:<span class="form-control"> <s:property
+										value="student.url" /></span></td>
+							<td>Data:<span class="form-control"> <s:property
+										value="student.data" /></span></td>
 						</tr>
 						<tr>
-							<td>Phone:<s:property value="survey.phone" /></td>
-							<td>What you liked the most about the campus?<br> <s:property
-									value="survey.campusliking" /></td>
+							<td>Phone:<span class="form-control"> <s:property
+										value="student.phone" /></span></td>
+							<td>What you liked the most about the campus?<br> <span
+								class="form-control"> <s:property
+										value="student.campusliking" /></span></td>
 						</tr>
 						<tr>
 							<td>Choose your graduation month and enter year in the text
-								box.<s:property value="survey.month" /> <br> Year:<s:property
-									value="survey.year" />
+								box.<span class="form-control"> <s:property
+										value="student.month" />
+							</span><br> Year:<span class="form-control"> <s:property
+										value="student.year" /></span>
 							</td>
 							<td>Likelihood of you recommending this school for other
-								students:<s:property value="survey.likelyrecommend" />
+								students:<span class="form-control"> <s:property
+										value="student.likelyrecommend" /></span>
 							</td>
-							<td>Enter your comments here:<s:property
-									value="survey.likelyrecommend" /></td>
+							<td>Enter your comments here:<span class="form-control">
+									<s:property value="student.likelyrecommend" />
+							</span></td>
 						</tr>
 						<tr>
-							<td>Date:<s:property value="survey.date" /></td>
+							<td>Date:<span class="form-control"> <s:property
+										value="student.date" /></span></td>
 							<td></td>
 							<td align="center"><a
 								href="/StudentSurveyStruts/createsurvey" class="btn btn-default">
-									Create Another Survey </a></td>
+									Create Another survey </a></td>
 						</tr>
 					</table>
 				</div>
