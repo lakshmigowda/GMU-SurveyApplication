@@ -37,7 +37,7 @@
 							</tr>
 							<tr>
 								<td width="33%">Student ID:<s:textfield id="id"
-										class="form-control" name="student.id" autofocus
+										class="form-control" name="student.id"
 										placeholder="Student ID" /></td>
 								<td width="33%">Full Name:<s:textfield id="name"
 										class="form-control" name="student.name"
@@ -74,7 +74,7 @@
 							</tr>
 							<tr>
 								<td>Choose your graduation month and enter year in the text
-									box. <s:select key="student.month" list="monthlist" /> <br>
+									box. <s:select key="student.month" list="monthslist" /> <br>
 									Year:<s:textfield class="form-control" name="student.year" />
 								</td>
 								<td>Likelihood of you recommending this school for other
