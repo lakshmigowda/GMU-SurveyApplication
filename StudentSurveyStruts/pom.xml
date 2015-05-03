@@ -45,6 +45,13 @@
 			<version>LATEST</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>LATEST</version>
+		</dependency>
+
+
 		<!-- Tiles Jars -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
