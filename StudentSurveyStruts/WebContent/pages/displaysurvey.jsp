@@ -77,7 +77,7 @@
 										value="student.likelyrecommend" /></span>
 							</td>
 							<td>Enter your comments here:<span class="form-control">
-									<s:property value="student.likelyrecommend" />
+									<s:property value="student.comments" />
 							</span></td>
 						</tr>
 						<tr>
