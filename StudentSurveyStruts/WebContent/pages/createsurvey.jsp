@@ -67,22 +67,20 @@
 								<td>Phone:<s:textfield type="tel" class="form-control"
 										name="student.phone" placeholder="xxx-xxx-xxxx" /></td>
 								<td>What you liked the most about the campus?<br> <s:checkboxlist
-										key="student.campusliking" list="likinglist"
-										name="campusliking" />
+										name="student.campusliking" list="likinglist" />
 								</td>
 								<td>How did you became interested in the university? <br>
-									<s:radio key="student.intersteduniv" list="interestlist"
-										name="intersteduniv" />
+									<s:radio name="student.intersteduniv" list="interestlist" />
 								</td>
 							</tr>
 							<tr>
 								<td>Choose your graduation month and enter year in the text
-									box. <s:select key="student.month" list="monthslist"
+									box. <s:select name="student.month" list="monthslist"
 										class="form-control" /> <br> Year:<s:textfield
 										class="form-control" name="student.year" />
 								</td>
 								<td>Likelihood of you recommending this school for other
-									students: <s:select key="student.likelyrecommend"
+									students: <s:select name="student.likelyrecommend"
 										list="recommendationlist" class="form-control" />
 								</td>
 								<td>Enter your comments here:<s:textarea
@@ -90,7 +88,7 @@
 										name="student.comments" /></td>
 							</tr>
 							<tr>
-								<td>Date:<s:textfield type="date" class="form-control"
+								<td>Date:<s:textfield class="form-control"
 										name="student.date" id="date" /></td>
 								<td></td>
 								<td align="center"><s:submit id="submitButton"
