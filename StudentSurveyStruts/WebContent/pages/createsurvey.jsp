@@ -69,18 +69,19 @@
 								<td>What you liked the most about the campus?<br> <s:checkboxlist
 										key="student.campusliking" list="likinglist" />
 								</td>
-								<td>How did you became interested in the university? <s:radio
-										key="student.intersteduniv" list="interestlist" />
+								<td>How did you became interested in the university? <br>
+									<s:radio key="student.intersteduniv" list="interestlist" />
 								</td>
 							</tr>
 							<tr>
 								<td>Choose your graduation month and enter year in the text
-									box. <s:select key="student.month" list="monthslist" /> <br>
-									Year:<s:textfield class="form-control" name="student.year" />
+									box. <s:select key="student.month" list="monthslist"
+										class="form-control" /> <br> Year:<s:textfield
+										class="form-control" name="student.year" />
 								</td>
 								<td>Likelihood of you recommending this school for other
 									students: <s:select key="student.likelyrecommend"
-										list="recommendationlist" />
+										list="recommendationlist" class="form-control" />
 								</td>
 								<td>Enter your comments here:<s:textarea
 										class="form-control" rows="4" cols="50"
