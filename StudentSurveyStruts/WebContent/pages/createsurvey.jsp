@@ -29,7 +29,7 @@
 				<div class="container">
 					<h1>Welcome to CS Dept. Survey!!</h1>
 
-					<s:form id="surveyform" action="submitsurvey.action" role="form"
+					<s:form id="surveyform" action="submitsurvey" role="form"
 						autocomplete="on">
 
 						<table class="table">
@@ -67,10 +67,12 @@
 								<td>Phone:<s:textfield type="tel" class="form-control"
 										name="student.phone" placeholder="xxx-xxx-xxxx" /></td>
 								<td>What you liked the most about the campus?<br> <s:checkboxlist
-										key="student.campusliking" list="likinglist" />
+										key="student.campusliking" list="likinglist"
+										name="campusliking" />
 								</td>
 								<td>How did you became interested in the university? <br>
-									<s:radio key="student.intersteduniv" list="interestlist" />
+									<s:radio key="student.intersteduniv" list="interestlist"
+										name="intersteduniv" />
 								</td>
 							</tr>
 							<tr>
