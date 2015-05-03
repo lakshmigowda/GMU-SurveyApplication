@@ -20,6 +20,7 @@ public class SurveyController extends ActionSupport {
 	private ArrayList<StudentBean> surveys;
 
 	public String createsurvey() {
+		student = new StudentBean();
 		return "createsurvey";
 	}
 

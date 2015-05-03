@@ -21,7 +21,7 @@
 		<p>Survey Results</p>
 		<p>
 			Name:
-			<s:property value="name" />
+			<s:property value="student.name" />
 		</p>
 		<p>
 			Mean:
