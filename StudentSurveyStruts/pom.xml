@@ -42,8 +42,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.5.8</version>
-			<scope>provided</scope>
+			<version>LATEST</version>
 		</dependency>
 
 		<!-- Tiles Jars -->

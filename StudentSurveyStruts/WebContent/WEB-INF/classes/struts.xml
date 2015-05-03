@@ -5,7 +5,7 @@
 <struts>
 	<constant name="struts.devMode" value="false" />
 	<constant name="struts.ui.theme" value="simple" />
-	<package name="helloworld" extends="tiles-default">
+	<package name="survey" extends="tiles-default">
 
 		<action name="createsurvey" class="Controller.SurveyController"
 			method="createsurvey">

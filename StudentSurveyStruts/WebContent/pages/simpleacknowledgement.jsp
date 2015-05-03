@@ -11,9 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Welcome Page</title>
 <link rel="stylesheet" type="text/css"
-	href="/StudentSurveyServlet4/resources/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="/StudentSurveyServlet4/resources/css/custom.css" />
+	href="/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/custom.css" />
 </head>
 <body class="body">
 	<div class="container">
