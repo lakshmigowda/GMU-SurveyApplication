@@ -87,7 +87,7 @@ function emailValidate() {
 
 function checkBoxValidate() {
 	var count = 0;
-	$('input[type=checkbox][name=campusliking]').each(function() {
+	$('input[type=checkbox][class=campusliking]').each(function() {
 		if (this.checked) {
 			count++;
 		}
@@ -102,7 +102,7 @@ function checkBoxValidate() {
 function radioButtonValidate() {
 
 	var bool = false;
-	$('input[type=radio][name=intersteduniv]').each(function() {
+	$('input[type=radio][class=intersteduniv]').each(function() {
 		if (this.checked) {
 			bool = true;
 		}

@@ -67,10 +67,12 @@
 								<td>Phone:<s:textfield type="tel" class="form-control"
 										name="student.phone" placeholder="xxx-xxx-xxxx" /></td>
 								<td>What you liked the most about the campus?<br> <s:checkboxlist
-										name="student.campusliking" list="likinglist" />
+										name="student.campusliking" class="campusliking"
+										list="likinglist" />
 								</td>
 								<td>How did you became interested in the university? <br>
-									<s:radio name="student.intersteduniv" list="interestlist" />
+									<s:radio name="student.intersteduniv" list="interestlist"
+										class="intersteduniv" />
 								</td>
 							</tr>
 							<tr>
