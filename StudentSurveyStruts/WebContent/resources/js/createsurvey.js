@@ -115,11 +115,11 @@ function radioButtonValidate() {
 $("#surveyform").submit(function(event) {
 	event.preventDefault();
 	$("#error").html("");
-	//nameValidate();
-	//addressValidate();
-	//emailValidate();
-	//checkBoxValidate();
-	//radioButtonValidate();
+	nameValidate();
+	addressValidate();
+	emailValidate();
+	checkBoxValidate();
+	radioButtonValidate();
 	if ($("#error").is(':empty')) {
 		this.submit();
 	} else {
